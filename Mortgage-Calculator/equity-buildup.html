@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Equity Buildup</title>
+	<link rel="stylesheet" type="text/css" href="../Branding/home.css">
+	<script data-ad-client="ca-pub-2647559998401134" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+<div id="horizontal-div-containing-entire-page">
+<header>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2647559998401134"
+	     crossorigin="anonymous"></script>
+	<!-- header-ad -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-2647559998401134"
+	     data-ad-slot="2556218560"
+	     data-ad-format="auto"
+	     data-full-width-responsive="true"></ins>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</header>
+<aside>
+<a href="../index.html"><img src="#" alt="snth.us"></a>
+</aside>
+<div id="vertical-div-containing-article-and-navigation">
+<hr>
+<article>
+<h1>Equity Buildup</h1>
+<h2>Sep. 2021</h2>
+<p> The <a href="mortgage-calculator.html">mortgage calculator</a>
+  proved that mortgage principal and monthly payments (p) are
+  related by an independent constant, set by interest rates (r)
+	and loan period (N).
+  The next <a href="index.html">three articles</a> used this
+  to build a relationship between home prices and rent, but
+  did not account for a major difference between borrowing and
+  renting&mdash;building up equity in a home.
+</p>
+<img src="equity-buildup-summary.png">
+<p> Similarly, the results show the inflation-adjusted equity buildup
+	(&Sigma;n/p) is independent of the price tag and can be applied
+	equivalently to any sized mortgage (&Proportional;p). The second significant
+	result is the impact of inflation on the gains from the
+	loan liability, making inflation-ajusted equity buildup much more biased
+	towards a straight line that the exponential curve typically associated
+	with mortgages due to paying off a growing portion of principal
+	each month.
+</p>
+<img src="equity-buildup.png" width="100%">
+<p> Unlike <a href="https://www.mortgagecalculator.org/">
+	inferior mortgage calculators</a> with admittedly pretty,
+  quasi-exponential interactive graphics, this site's calculator
+	and articles emphasize the linear aspects of mortgages in
+	the 21st Century. The
+	<a href="leverage-ratio.html">next article</a> continues down
+	this path by defining the leverage ratio and also accounting
+	for closing costs, which are not included in the proof below.
+</p>
+<h2>Equity Buildup Proof</h2>
+<p> Equity buildup is based on the same mortgage equations used in the
+  <a href="mortgage-calculator.html">mortgage calculator</a>,
+  where 'n' is the number of the month, 'N' the loan period, 'P0'
+	initial loan principal, 'p' the monthly payment,
+  and 'r' the monthly interest multiplication factor.
+</p>
+<img src="mortgage-calculator-summary.png">
+<p> The real equity gained each month is due to the amount of principal
+  being repayed (i.e. difference between principal remaining
+  between months n-1 and n) and due to exposure to
+  inflation/deflation (I%) of the remaining loan liability (Pn).
+</p>
+<img src="equity-delta.png">
+
+<p> The sum of nominal gains from the month the liability was incurred
+	to the nth month, for the general case:
+</p>
+<img src="equity-buildup-sum.png">
+<p> All that remains is accounting for the possibility of 0% interest rates,
+	(when the geometric series does not apply). This final equation
+	describes the inflation-adjusted equity buildup due to the loan
+	liability, the next article will account for closing
+	costs and financing fees by defining an
+	<a href="leverage-ratio.html">effective leverage ratio</a>.
+</p>
+<img src="equity-buildup-summary.png">
+
+<p> One interesting results is that this equation devolves into a straight
+	line if inflation rates equal interest rates. This will be
+	explored further later in this <a href="index.html">series</a>.
+	A second degenerate result is 0% inflation
+	(<span style="white-space:nowrap;">i = 1</span>), where the equity
+	buildup approaches R(N) at the end of the loan term.
+</p>
+<footer>
+<hr>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	<img alt="Creative Commons License" style="border-width:0"
+	src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
+  Ben Lorenzetti<br>
+  This work is licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
+	Commons Attribution 4.0 International License
+</a>.
+</footer>
+</article>
+<nav>
+  <ul>
+    <li><a href="index.html">Back</a></li>
+    <li><a href="../Archive/index.html">Archive</a></li>
+		<li><a href="../Privacy-Policy/index.html">Privacy</a></li>
+  </ul>
+  <div style="clear: both; min-width: 100%; margin: 0px; padding: 0px;"></div>
+</nav>
+</div><!--article+nav wrapper-->
+<footer>
+</footer>
+</div><!--horizontal centering div-->
+</body>
+</html>
