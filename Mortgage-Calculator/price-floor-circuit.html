@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Price Floor Model</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/ben.css">
+	<script data-ad-client="ca-pub-2647559998401134" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+<div id="horizontal-div-containing-entire-page">
+<header></header>
+<aside style="background-image: Linear-gradient(to top, #a02040, #404040);
+	min-width: 250px;">
+<a href="index.html">
+	<img src="../Brand/20220620-geometric-series-16.png"
+	width="250px" alt="snth.us">
+</a>
+</aside>
+<div id="vertical-div-containing-article-and-navigation">
+<hr/>
+<article>
+<h1>Price Floor (<i>c</i> = 1) Model</h1>
+<p> The <a href="index.html">mortgage calculator</a>
+	demonstrated an important result: there is a constant, denoted
+	<i>R<sub>N</sub></i>, which relates monthly mortgage payments to
+	inital loan principal and depends only on a geometric series of
+	the interest rate (<i>i</i>) and loan term (<i>N</i>) &mdash; most
+	importantly <i>R<sub>N</sub></i> is a constant, independent of loan size.
+</p>
+<p> This constant is like
+	<math><mi>V</mi><mo>=</mo><mi>I</mi><mi>R</mi></math>, where
+	current (<i>I</i>) is akin to monthly mortgage payments and
+	voltage (<i>V</i>) is akin to loan principal.
+	We define a variable <i>p</i> to be the monthly
+	mortgage payment such that
+</p>
+<math style="margin-left: 10%;">
+	<mo>(</mo><mn>1</mn><mo>-</mo><mi>dp</mi><mo>)</mo>
+	<msub><mi>V</mi><mtext>home value</mtext></msub><mo>=</mo>
+	<mi>p</mi><mo>*</mo><msub><mi>R</mi><mi>N</mi></msub>
+	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
+	<msub><mi>R</mi><mi>N</mi></msub><mo>=</mo>
+	<mrow><mo>{</mo>
+		<mtable>
+			<mtr>
+				<mtd>
+					<mfrac>
+						<mrow><mn>1</mn><mo>-</mo><msup><mi>i</mi>
+							<mrow><mo>-</mo><mi>N</mi><mo>/</mo><mtext>months</mtext></mrow></msup>
+						</mrow>
+						<mrow><mn>1</mn><mo>-</mo><msup><mi>i</mi>
+							<mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow>
+					</mfrac><mtext>months</mtext>
+					<mtext>,
+				</mtd><mtd>
+					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
+				</mtd>
+			</mtr><mtr>
+				<mtd><mi>N</mi><mtext>,</mtext></mtext><mspace width="1em"/></mtd>
+				<mtd><mi>i</mi><mo>=</mo><mn>1</mn></mtd>
+			</mtr>
+		</mtable>
+	</mrow>
+</math>
+<p> where <i>dp</i> is the down payment percent (in fractional form).
+</p>
+<p> This Ohm's law relationship inspires creation of a
+	circuit model for home prices. The analysis of property prices
+	begins with estimating the rent the property could fetch and the
+	sum of all operating expenses a landlord would face based on
+	current market prices. Property taxes <i>G<sub>prop</sub></i> (% annually)
+	are broken out separately from the other expenses because they
+	are based on home value.
+</p>
+<p> After operating and ownership expenses are paid for, what remains
+	is gross income (<i>i<sub>inc</sub></i>) for the landlord.
+	We do not classify mortgage payments as an operating expense,
+	therefore income tax <i>T</i> (% annually) is proportional to gross income
+	(<i>i<sub>inc</sub></i>).
+	What remains we define as net income (<i>i<sub>net</sub></i>).
+</p>
+<p> What we have described so far is not a very interesting circuit,
+	it is basically a current node with several independent and
+	dependent current sources and a floating voltage. But
+	if we complete the circuit with <i>R<sub>N</sub></i> such that
+	<math><msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mi>p</mi></math>,
+	the model will determine the home price below which a landlord would
+	have monthly profits in excess of the the mortgage payment,
+	i.e. positive cash flow.
+</p>
+<img src="20220620-price-floor-model.png" width="75%">
+<p> In a well functioning market with mortgage lending available,
+	you would not expect to find any usable homes at this price
+	because if home building/maintaining were this inexpensive
+	relative to rents many would be building or buying to get out
+	of renting. Therefore, resulting from completing the circuit with
+	<math><msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mi>p</mi></math>,
+	we call this value <i>V<sub>floor</sub></i>, and we call this
+	floor value of the monthly mortgage payment <i>q</i>.
+</p>
+<math style="margin-left:10%;">
+	<msub><mi>V</mi><mtext>floor</mtext></msub><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<msub><mi>I</mi><mtext>rent</mtext></msub><mo>-</mo>
+			<msub><mi>i</mi><mtext>expenses</mtext></msub>
+		</mrow><mrow>
+			<msub><mi>G</mi><mtext>policy</mtext></msub><mo>+</mo>
+			<msub><mi>G</mi><mtext>prop</mtext></msub>
+		</mrow>
+	</mfrac>
+	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
+	<msub><mi>G</mi><mtext>policy</mtext></msub><mo>=</mo>
+	<mfrac>
+		<mrow><mn>1</mn><mo>-</mo><mi>dp</mi></mrow>
+		<mrow>
+			<msub><mi>R</mi><mi>N</mi></msub>
+				<mrow><mo>(</mo>
+					<mn>1</mn><mo>-</mo><mfrac><mi>T</mi><mn>12</mn></mfrac>
+				<mo>)</mo></mrow>
+		</mrow>
+	</mfrac>
+</math>
+<p> and </p>
+<math style="margin-left:10%;">
+	<mi>q</mi><mo>=</mo>
+	<mrow><mo>(</mo>
+		<mn>1</mn><mo>-</mo><mfrac><mi>T</mi><mn>12</mn></mfrac>
+	<mo>)</mo></mrow>
+	<mrow><mo>(</mo>
+		<msub><mi>I</mi><mtext>rent</mtext></msub><mo>-</mo><msub><mi>i</mi><mtext>expenses</mtext></msub>
+	<mo>)</mo></mrow>
+	<mrow><mo>(</mo>
+		<mn>1</mn><mo>-</mo>
+		<mfrac>
+			<msub><mi>G</mi><mtext>prop</mtext></msub>
+			<mrow>
+				<msub><mi>G</mi><mtext>policy</mtext></msub><mo>+</mo>
+				<msub><mi>G</mi><mtext>prop</mtext></msub>
+			</mrow>
+		</mfrac>
+	<mo>)</mo></mrow>
+</math>
+<p> When a home buyer and seller agree to a sales prices
+	different from the buyer's <i>V<sub>floor</sub></i>,
+	the buyer becomes a new independent voltage (cash) source that
+	makes up for non-zero monthly cash flows. We define a ratio (<i>c</i>)
+	in terms the agreed upon market price relative to <i>V<sub>floor</sub></i>.
+</p>
+<math style="margin-left: 20%">
+	<mi>c</mi><mo>=</mo>
+	<mfrac>
+		<msub><mi>V</mi><mtext>market</mtext></msub>
+		<msub><mi>V</mi><mtext>floor</mtext></msub>
+	</mfrac><mo>=</mo>
+	<mfrac><mi>p</mi><mi>q</mi></mfrac>
+</math>
+<hr>
+<p> If the E/P of the mortgage principal is constant, what other
+	landlord expenses are proportional to rental propery value?
+	Property taxes, income taxes, and to some extent utilities,
+	insurance, etc. Thus these expenses can be
+	<a href="expense-normalization.html">normalized into
+	constant price to expense (P/E') ratios</a> with an accurate
+	appraisal of property value and expenses.
+</p>
+<p> The constant P/E of the mortgage and P/E's of other
+	expenses can be represented schematically by resistors in parallel
+	with an independent source, which is either the purchase
+	price (like Voltage) or monthly rent income (like Current),
+	such that
+	<span style="white-space:nowrap">Property Value = (R1||R2||R3...) &times; Monthly Rent</span>
+</p>
+
+<h2>The Next Step</h2>
+<p> In the model the estimated value forms a lower limit on the fair price
+	of a property. Take the net monthly income to the
+	(1) <a href="mortgage-calculator.html">mortgage calculator</a>
+	to compare the asking price to other investments.
+</p>
+<p>	This is the second article (2) of a series
+	<a href="index.html">Should I Buy or Rent?</a>
+	Monthly "R" constants used in this model are calculated from (3)
+	<a href="normal-expenses.html">normal expenses</a>
+	for a property or local area.
+</p>
+<footer>
+<hr>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	<img alt="Creative Commons License" style="border-width:0"
+		src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
+	Ben Lorenzetti<br>
+	This work is licensed under a
+	<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
+		Commons Attribution 4.0 International License
+	</a>.
+</footer>
+</article>
+<nav>
+  <ul>
+    <li><a href="index.html">Back</a></li>
+    <li><a href="../Archive/index.html">Archive</a></li>
+		<li><a href="../Privacy-Policy/index.html">Privacy</a></li>
+  </ul>
+  <div style="clear: both; min-width: 100%; margin: 0px; padding: 0px;"></div>
+</nav>
+</div><!--article+nav wrapper-->
+<footer>
+</footer>
+</div><!--horizontal centering div-->
+</body>
+</html>
