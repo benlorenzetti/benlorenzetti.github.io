@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="UTF-8"/>
 	<title>Equity Buildup</title>
-	<link rel="stylesheet" type="text/css" href="../Branding/home.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/ben.css">
 	<script data-ad-client="ca-pub-2647559998401134" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
@@ -29,95 +29,274 @@
 <div id="vertical-div-containing-article-and-navigation">
 <hr>
 <article>
-<h1>Equity Buildup</h1>
-<h2>Sep. 2021</h2>
-<p> The <a href="mortgage-calculator.html">mortgage calculator</a>
-  proved that mortgage principal and monthly payments (p) are
-  related by an independent constant, set by interest rates (r)
-	and loan period (N).
-  The next <a href="index.html">three articles</a> used this
-  to build a relationship between home prices and rent, but
-  did not account for a major difference between borrowing and
-  renting&mdash;building up equity in a home.
-</p>
-<img src="equity-buildup-summary.png">
-<p> Similarly, the results show the inflation-adjusted equity buildup
-	(&Sigma;n/p) is independent of the price tag and can be applied
-	equivalently to any sized mortgage (&Proportional;p). The second significant
-	result is the impact of inflation on the gains from the
-	loan liability, making inflation-ajusted equity buildup much more biased
-	towards a straight line that the exponential curve typically associated
-	with mortgages due to paying off a growing portion of principal
-	each month.
-</p>
-<img src="equity-buildup.png" width="100%">
-<p> Unlike <a href="https://www.mortgagecalculator.org/">
-	inferior mortgage calculators</a> with admittedly pretty,
-  quasi-exponential interactive graphics, this site's calculator
-	and articles emphasize the linear aspects of mortgages in
-	the 21st Century. The
-	<a href="leverage-ratio.html">next article</a> continues down
-	this path by defining the leverage ratio and also accounting
-	for closing costs, which are not included in the proof below.
-</p>
-<h2>Equity Buildup Proof</h2>
-<p> Equity buildup is based on the same mortgage equations used in the
-  <a href="mortgage-calculator.html">mortgage calculator</a>,
-  where 'n' is the number of the month, 'N' the loan period, 'P0'
-	initial loan principal, 'p' the monthly payment,
-  and 'r' the monthly interest multiplication factor.
-</p>
-<img src="mortgage-calculator-summary.png">
-<p> The real equity gained each month is due to the amount of principal
-  being repayed (i.e. difference between principal remaining
-  between months n-1 and n) and due to exposure to
-  inflation/deflation (I%) of the remaining loan liability (Pn).
-</p>
-<img src="equity-delta.png">
+<h1>Mortgage Preference</h1>
 
-<p> The sum of nominal gains from the month the liability was incurred
-	to the nth month, for the general case:
+<p> For fixed rate mortgages, the principal (<i>P</i>) remaining after the
+	<i>n</i><sub>th</sub>
+	monthly payment is defined in terms of the previous month's principal,
+	the monthly interest rate (<i>i</i>) and monthly payment (<i>p</i>).
 </p>
-<img src="equity-buildup-sum.png">
-<p> All that remains is accounting for the possibility of 0% interest rates,
-	(when the geometric series does not apply). This final equation
-	describes the inflation-adjusted equity buildup due to the loan
-	liability, the next article will account for closing
-	costs and financing fees by defining an
-	<a href="leverage-ratio.html">effective leverage ratio</a>.
+<math style="margin-left:10%">
+	<msub><mi>P</mi><mi>n</mi></msub><mo>=</mo><mi>i</mi>
+	<msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<mo>-</mo><mi>p</mi>
+</math>
+<p> The <a href="index.html">mortgage calculator</a> is based a
+  geometric series for this sequence over a mortgage term of
+	(<i>N</i>) months to directly calculate the principal remaining in any
+	given month. The result was:
 </p>
-<img src="equity-buildup-summary.png">
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>P</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+	<mo>=</mo>
+	<mrow><mo>{</mo>
+		<mtable>
+			<mtr>
+				<mtd>
+					<mfrac>
+						<mrow><mn>1</mn><mo>-</mo>
+							<msup><mi>i</mi>
+								<mrow><mo>(</mo><mi>n</mi><mo>-</mo><mi>N</mi><mo>)</mo><mo>/</mo><mtext>months</mtext></mrow>
+							</msup>
+						</mrow>
+						<mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+					</mfrac><mtext>months</mtext>
+					<mtext>,</mtext>
+				</mtd><mtd>
+					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
+				</mtd>
+			</mtr><mtr>
+				<mtd>
+					<mi>N</mi><mo>-</mo><mi>n</mi><mtext>,</mtext></mtext><mspace width="1em"/>
+				</mtd>
+				<mtd><mi>i</mi><mo>=</mo><mn>1</mn></mtd>
+			</mtr>
+		</mtable>
+	</mrow>
+</math>
+<p> Substituting
+	<math><mi>n</mi><mo>=</mo><mn>0</mn></math> into this equation
+	demonstrates a surprising (unsurprising) result:
+	the initial mortgage pricipal (<i>P<sub>0</sub></i>) and monthly
+	payment (<i>p</i>) are related linearly by an independent constant
+	(<i>R<sub>N</sub></i>)
+	fixed by the monthly interest factor (<i>i</i>) and loan period (<i>N</i>).
+</p>
+<p> The prior <a href="index.html">two articles</a> used the linearity of
+	<math>
+		<mfrac><msub><mi>P</mi><mn>0</mn></msub><mi>p</mi></mfrac>
+		<mo>=</mo><msub><mi>R</mi><mi>N</mi></msub>
+	</math>
+  to model a relationship between home prices and rent.
+	However to fit this instantaneous home price model to real data,
+	the differences from actual market prices were lumped into
+	a previously unelaborated-upon scalar (<i>c</i>).
+	This scalar suggests that Americans have a relatively
+	consistent preference (i.e. pay more) for mortgages and their associated
+	costs than for rent.
+	(for assumptions used in the graph below, see the
+	<a href="price-to-rent-ratio.html">P/R ratio</a>).
+</p>
+<img src="mortgage-preference-scalar.png">
+<p> To make use of this scalar (<i>c</i>) we need to account for the
+	major difference between owning with a mortgage and
+	renting&mdash;building up equity in the loan.
+</p>
+<h2>Nominal Equity Gain from a Loan</h2>
+<p> The nominal equity gain in the <i>n</i><sub>th</sub>
+	month of a mortgage is due
+	to the difference in the balance owed between months <i>n-1</i> and <i>n</i>
+	and due to exposure to inflation (home appreciation) of the
+	remaining loan liability (where <i>&pi;</i> is monthly home appreciation
+  factor).
+</p>
+<math style="margin-left:10%;">
+	<mo>&Delta;</mo>
+	<msub><mi>E</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn><mo>,</mo><mi>n</mi></mrow></msub>
+	<mo>=</mo><msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<mo>-</mo><msub><mi>P</mi><mi>n</mi></msub>
+	<mo>+</mo><mo>(</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn><mo>)</mo>
+	<msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+</math>
+<br>
+<math style="margin-left:10%;">
+	<mo>&Delta;</mo>
+	<msub><mi>E</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn><mo>,</mo><mi>n</mi></mrow></msub>
+	<mo>=</mo><msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<mo>-</mo><mo>(</mo>
+		<mi>i</mi><msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+		<mo>-</mo><mi>p</mi>
+	<mo>)</mo>
+	<mo>+</mo><mo>(</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn><mo>)</mo>
+	<msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+</math>
+<br>
+<math style="margin-left:10%;">
+	<mo>&Delta;</mo>
+	<msub><mi>E</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn><mo>,</mo><mi>n</mi></mrow></msub>
+	<mo>=</mo><msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<mo>(</mo>
+		<mn>1</mn><mo>-</mo><mi>i</mi><mo>+</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn>
+	<mo>)</mo>
+	<mo>+</mo><mi>p</mi>
+</math>
+<p> Substituting the closed form solution for fixed rate mortgages
+	and defining new variables for nominal monthly interest (<i>I</i>) and
+	home appreciation (<i>&Pi;</i>) rates and real interest rates (<i>R</i>)
+	results in
+</p>
+<math style="margin-left: 10%;">
+	<mfrac>
+		<mrow><mo>&Delta;</mo><mi><msub><mi>E</mi><mi>n</mi></msub></mrow>
+		<mi>p</mi>
+	</mfrac>
+	<mo>=</mo>
 
-<p> One interesting results is that this equation devolves into a straight
-	line if inflation rates equal interest rates. This will be
-	explored further later in this <a href="index.html">series</a>.
-	A second degenerate result is 0% inflation
-	(<span style="white-space:nowrap;">i = 1</span>), where the equity
-	buildup approaches R(N) at the end of the loan term.
+	<mrow><mo>{</mo>
+		<mtable>
+			<mtr>
+				<mtd>
+					<mn>1</mn><mo>-</mo><mfrac><mi>R</mi><mi>I</mi></mfrac>
+					<mrow><mo>[</mo>
+						<mn>1</mn><mo>-</mo>
+						<msup><mi>i</mi>
+							<mrow>
+								<mo>(</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo>-</mo><mi>N</mi><mo>)</mo>
+								<mo>/</mo><mtext>months</mtext>
+							</mrow>
+						</msup>
+					<mo>]</mo></mrow>
+					<mtext>,</mtext>
+				</mtd><mtd>
+					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
+				</mtd>
+			</mtr><mtr>
+				<mtd>
+					<mn>1</mn><mo>+</mo><mi>&Pi;</mi>
+					<mo>(</mo><mi>N</mi><mo>-</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>)</mo>
+					<mo>/</mo><mtext>months</mtext>
+					<mtext>,</mtext></mtext>
+				</mtd>
+				<mtd><mi>i</mi><mo>=</mo><mn>1</mn></mtd>
+			</mtr>
+		</mtable>
+	</mrow>
+
+	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
+	<mtable>
+		<mtr>
+			<mtd><mi>I</mi><mo>=</mo><mi>i</mi><mo>-</mo><mn>1</mn></mtd>
+		</mtr><mtr>
+			<mtd><mi>&Pi;</mi><mo>=</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn></mtd>
+		</mtr><mtr>
+			<mtd><mi>R</mi><mo>=</mo><mi>i</mi><mo>-</mo><mi>&pi;</mi></mtd>
+		</mtr>
+	</mtable>
+</math>
+<p> for
+	<math><mi>n</mi><mo>&isin;</mo><mo>[</mo><mn>1</mn><mo>...</mo><mi>N</mi><mo>]</mo></math>.
+	Summing the monthly equity gains from the first to <i>n</i><sub>th</sub>
+	month and once again using a geometric series (and aritmetic series)
+	yields the nominal equity buildup
+	<mi>&Sigma;<sub>n</sub></i> due to a fixed rate mortgage:
 </p>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>&Sigma;</mi><mi><mi>n</mi></msub><mi>p</mi></mfrac>
+	<mo>=</mo>
+
+	<mrow><mo>{</mo>
+		<mtable>
+			<mtr>
+				<mtd>
+					<mi>n</mi><mo>-</mo><mfrac><mi>R</mi><mi>I</mi></mfrac>
+					<mrow><mo>[</mo>
+						<mi>n</mi><mo>-</mo>
+						<mfrac>
+							<mrow>
+								<msup><mi>i</mi><mrow><mi>n</mi><mo>/</mo><mtext>months</mtext></mrow></msup>
+								<mo>-</mo><mn>1</mn>
+							</mrow><mrow>
+								<mi>I</mi>
+								<msup><mi>i</mi><mrow><mi>N</mi><mo>/</mo><mtext>months</mtext></mrow></msup>
+							</mrow>
+						</mfrac><mtext>months</mtext>
+					<mo>]</mo></mrow>
+					<mtext>,</mtext><mspace width="22pt"/>
+				</mtd><mtd>
+					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
+				</mtd>
+			</mtr><mtr>
+				<mtd>
+					<mi>n</mi><mo>+</mo><mi>&Pi;</mi>
+					<mrow><mo>[</mo>
+						<mi>N</mi><mo>+</mo><mn>1</mn><mspace width="1pt"/><mtext>months</mtext>
+						<mo>-</mo><mi>n</mi>
+						<mo>-</mo>
+						<mfrac>
+							<msup><mi>n</mi><mn>2</mn></msup>
+							<mrow><mn>2</mn><mspace width="1pt"/><mtext>months</mtext></mrow>
+						</mfrac>
+					<mo>]</mo></mrow>
+					<mtext>,</mtext></mtext>
+				</mtd>
+				<mtd><mi>i</mi><mo>=</mo><mn>1</mn></mtd>
+			</mtr>
+		</mtable>
+
+		<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
+		<mtable>
+			<mtr>
+				<mtd><mi>I</mi><mo>=</mo><mi>i</mi><mo>-</mo><mn>1</mn></mtd>
+			</mtr><mtr>
+				<mtd><mi>&Pi;</mi><mo>=</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn></mtd>
+			</mtr><mtr>
+				<mtd><mi>R</mi><mo>=</mo><mi>i</mi><mo>-</mo><mi>&pi;</mi></mtd>
+			</mtr>
+		</mtable>
+	</mrow>
+
+<p> for
+	<math><mi>n</mi><mo>&isin;</mo><mo>[</mo><mn>1</mn><mo>...</mo><mi>N</mi><mo>]</mo></math>.
+	This summary equation shows that, similar to the key result
+	<math>
+		<mfrac><msub><mi>P</mi><mn>0</mn></msub><mi>p</mi></mfrac>
+		<mo>=</mo><msub><mi>R</mi><mi>N</mi></msub>
+	</math>, the dynamics of equity buildup in a mortgage can also be
+	written independently of the initial loan size/property value.
+</p>
+<p> It also shows a second surprising (unsurprising) result&mdash;if
+	real interest rates are zero, then nominal equity gains in the
+	mortgage are equal to the monthly mortgage payment!
+</p>
+<p> The <a href="performance-with-leverage.html">next article</a>
+	continues the analysis of the mortgage preference scalar <i>c</i>
+	by defining accounting for all the aspects that effect a
+	mortgage investment's performance.
+</p>
+
+</article>
+<nav>
+  <ul>
+    <li><a href="price-to-rent-ratio.html">Prev</a></li>
+		<li><a href="performance-with-leverage.html">Next</a></li>
+    <li><a href="../Economics/index.html">Index</a></li>
+		<li><a href="../Privacy-Policy/index.html">Privacy Policy</a></li>
+  </ul>
+  <div style="clear: both; min-width: 100%; margin: 0px; padding: 0px;"></div>
+</nav>
+<br>
 <footer>
-<hr>
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
 	<img alt="Creative Commons License" style="border-width:0"
 	src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
-  Ben Lorenzetti<br>
+  Ben Lorenzetti, 2022<br>
   This work is licensed under a
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
 	Commons Attribution 4.0 International License
 </a>.
 </footer>
-</article>
-<nav>
-  <ul>
-    <li><a href="index.html">Back</a></li>
-    <li><a href="../Archive/index.html">Archive</a></li>
-		<li><a href="../Privacy-Policy/index.html">Privacy</a></li>
-  </ul>
-  <div style="clear: both; min-width: 100%; margin: 0px; padding: 0px;"></div>
-</nav>
 </div><!--article+nav wrapper-->
-<footer>
-</footer>
+
 </div><!--horizontal centering div-->
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="UTF-8"/>
 	<title>Refinance Period</title>
-	<link rel="stylesheet" type="text/css" href="../Branding/home.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/ben.css">
 	<script data-ad-client="ca-pub-2647559998401134" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
@@ -38,8 +38,8 @@
 
 </p>
 <img src="property-projection-1.png" style="margin-left:50px;">
-<p> We previously found the rate of
-	<a href="./equity-buildup.html">equity buildup</a>
+<p> We previously found the
+	<a href="./equity-buildup.html">nominal equity buildup</a>
 	<i>&sum;<sub>n</sub></i> in mortgages with monthly payment <i>p</i> and the
 	<a href="./leveraged-performance.html">performance</a>
 	<i>G<sub>n</sub></i> of real estate investments after <i>n</i> months,
@@ -49,14 +49,14 @@
 	(<i>&pi;</i>) and an opportunity cost
 	(<i>&omega;</i>) of other investments.
 </p>
-<math style="margin-left: 10%;">
+<math>
   <msub><mi>G</mi><mi>n</mi></msub>
   <mo>=</mo>
   <mrow>
     <mfrac><mi>L</mi><msub><mi>R</mi><mi>N</mi></msub></mfrac>
     <mo>(</mo><mrow>
       <mrow>
-        <mi>c</mi><mi>&omega;</mi>
+        <mfrac><mi>&omega;</mi><mi>c</mi></mfrac>
 				<mo>(</mo><mfrac>
 					<mrow><msup><mi>&omega;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
 					<mrow><mi>&omega;</mi><mo>-</mo><mn>1</mn></mrow>
@@ -84,34 +84,36 @@
 				</mfrac>
 			</mrow>
 			<mo>+</mo>
-			<mfrac><msub><mi>&sum;</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+			<mfrac><msub><mi>&Sigma;</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+			<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
 			<mo>-</mo><mi>T</mi>
     </mrow><mo>)</mo>
   </mrow>
 	<mspace width="2em"/><mtext>for</mtext><mspace width="1em"/>
-	<mi>&omega;</mi><mo>&gt;</mo><mi>&pi;</mi><mo>&gt;</mo><mn>1</mn>
+	<mi>&omega;</mi><mo>&gt;</mo><mi>&pi;</mi><mo>&geq;</mo><mn>1</mn>
 </math>
-<p> where
-  <math><mi>c</mi><mo>=</mo><mfrac><mi>q</mi><mi>p</mi></mfrac></math>
-  is a cash-flow factor,
+<p> for
+  <math><mi>c</mi><mo>=</mo><mfrac><mi>p</mi><mi>c</mi></mfrac></math>
+  mortgage preference factor,
   <math><mi>T</mi><mo>=</mo>
     <mfrac><mrow><msub><mi>F</mi><mn>1</mn></msub>
       <mo>+</mo><msub><mi>F</mi><mn>2</mn></msub>
       </mrow>
       <mi>p</mi>
     </mfrac>
-  </math> is time underwater and
+  </math> time underwater and
   <math><mi>L</mi><mo>=</mo>
     <mfrac>
       <mrow><mi>p</mi><mo>&times;</mo><msub><mi>R</mi><mi>N</mi></msub></mrow>
       <mrow><msub><mi>E</mi><mn>0</mn></msub>
         <mo>+</mo><msub><mi>F</mi><mn>1</mn></msub></mrow>
     </mfrac>
-  </math> is the effective leverage ratio.
+  </math> effective leverage ratio.
 </p>
-<p> For example if <math><mi>G</mi><mo>=</mo><mn>0.1</mn></math>, this would
-	be like saying your IRA is up 10% over <math><mi>n</mi></math> months.
-	Like other lowercase/capital variables,
+<p> For example if
+	<math><msub><mi>G</mi><mi>n</mi></msub><mo>=</mo><mn>0.1</mn></math>,
+	this would be like saying your IRA is up 10% after <math><mi>n</mi></math>
+	months. Like other lowercase/capital variables,
 	we define <math><mi>g</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>G</mi></math>
 	as the fractional performance of a real estate investment
 	over <math><mi>n</mi></math> months.
@@ -162,7 +164,7 @@
 		<mfrac><mrow><mo>d</mo><mi>g</mi></mrow>
 			<mrow><mo>d</mo><mi>n</mi></mrow></mfrac>
 		<mo>+</mo>
-		<apply><mo>ln</mo><mi>(g)</mi></apply>
+		<mrow><mo>ln</mo><mi>(g)</mi></mrow>
 		<msup><mi>g</mi><mfrac><mn>1</mn><mi>n</mi></mfrac></msup>
 		<mo>&times;</mo>
 		<mfrac><mrow><mo>-</mo><mn>1</mn></mrow>
@@ -184,13 +186,12 @@
 			<mfrac><mrow><mo>d</mo><mi>g</mi></mrow>
 				<mrow><mo>d</mo><mi>n</mi></mrow></mfrac>
 			<mo>-</mo>
-			<mfrac><apply><mo>ln</mo><mi>g</mi></apply><mi>n</mi></mfrac>
+			<mfrac><mrow><mo>ln</mo><mi>g</mi></mrow><mi>n</mi></mfrac>
 		<mo>)</mo></mrow>
 	</mrow>
 </math>
 <p> Setting the derivative to zero and substituting for
-	<math><mi>G</mi></math> gives our optimization equation for
-	<math><mi>n</mi></math>, for
+	<i>G</i> gives our optimization equation for <i>n</i>, for
 	<math><mi>n</mi><mo>&gt;</mo><mn>0</mn></math>.
 </p>
 <math style="margin-left: 20%;">
@@ -199,9 +200,9 @@
 		<mrow><mo>d</mo><mi>n</mi></mrow></mfrac>
 	<mo>=</mo>
 	<mo>(</mo><mi>G</mi><mo>+</mo><mn>1</mn><mo>)</mo>
-	<apply><mo>ln</mo>
+	<mrow><mo>ln</mo>
 		<mrow><mo>(</mo><mi>G</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow>
-	</apply>
+	</mrow>
 </math>
 <p> Next we define
 	<math><mi>&Omega;</mi><mo>=</mo><mi>&omega;</mi><mo>-</mo><mn>1</mn></math>,
@@ -217,7 +218,7 @@
 		<math style="margin-left: 20%;">
 			<mn>0</mn><mo>&lt;</mo><mi>&Omega;</mi><mo>&Lt;</mo><mn>1</mn>
 			<mspace width="1em"/><mtext>and</mtext><mspace width="1em"/>
-			<mn>0</mn><mo>&lt;</mo><mi>&Pi;</mi><mo>&lt;</mo><mi>&Omega;</mi>
+			<mn>0</mn><mo>&leq;</mo><mi>&Pi;</mi><mo>&lt;</mo><mi>&Omega;</mi>
 			<mspace width="1em"/><mo>&therefore;</mo><mspace width="1em"/>
 			<mn>0</mn><mo>&lt;</mo><mi>R</mi><mo>&lt;</mo><mi>&Omega;</mi>
 		</math>
@@ -227,7 +228,7 @@
 	</li>
 	<li>Based on assumption (1), we make the algebra and computation simpler
 		by taking Taylor Series expansions for ln(x) about x=1. Thus for &omega;,
-		&pi;, and &rho; defined above in place of x,
+		&pi;, and &rho; in place of x,
 		<br>
 		<math style="margin-left: 20%;">
 			<apply><mo>ln</mo><mi>x</mi></apply><mo>&asymp;</mo><mi>X</mi>

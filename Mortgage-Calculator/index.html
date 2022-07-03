@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="UTF-8"/>
 	<title>Snth Mortgage Calculator</title>
 	<link rel="stylesheet" type="text/css" href="../CSS/ben.css">
 	<script data-ad-client="ca-pub-2647559998401134" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -306,6 +306,32 @@ This calculator helps evaluate <em>if it is a good deal</em>.
 
 
 <h2>Proof</h2>
+<math style="margin-left: 10%;">
+	<msub><mi>P</mi><mn>0</mn></msub><mo>=</mo>
+	<mi>p</mi><msub><mi>R</mi><mi>N</mi></msub>
+	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
+	<msub><mi>R</mi><mi>N</mi></msub><mo>=</mo>
+	<mrow><mo>{</mo>
+		<mtable>
+			<mtr>
+				<mtd>
+					<mfrac>
+						<mrow><mn>1</mn><mo>-</mo><msup><mi>i</mi>
+							<mrow><mo>-</mo><mi>N</mi><mo>/</mo><mtext>months</mtext></mrow></msup>
+						</mrow>
+						<mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+					</mfrac><mtext>months</mtext>
+					<mtext>,</mtext>
+				</mtd><mtd>
+					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
+				</mtd>
+			</mtr><mtr>
+				<mtd><mi>N</mi><mtext>,</mtext></mtext><mspace width="1em"/></mtd>
+				<mtd><mi>i</mi><mo>=</mo><mn>1</mn></mtd>
+			</mtr>
+		</mtable>
+	</mrow>
+</math>
 <img src="principal-payment-line.png" width="400px" alt="math proof">
 <p>For a loan of N months, the principal owed at the Nth month, P(N),
 	is zero. Thus, the monthly payment p is linearly related to intial
