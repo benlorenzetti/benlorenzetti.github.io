@@ -35,20 +35,80 @@
 	(<i>&Sigma;<sub>n</sub></i>) with potentially
   negative monthly cash flows, we need to sum monthly cash flow
   with weighting factors for opportunity cost (<math>&omega;</math>)
-	and adjust for inflation (<math>&pi;</math>).
+	of other investments.
 </p>
-<math>
+<p> From the <a href="price-floor-circuit.html">price floor model</a>, the
+	mortgage-free cash-flow of a property (<i>q</i>) is expected to
+	grow with underlying appreciation factor (<i>&pi;</i>),
+	while the nominal mortgage payment (<i>p</i>) remains fixed.
+	Furthermore, unlike equity, cash-flow dividends can be
+	invested elsewhere for a some average monthly return (<i>&Omega;</i>)
+	with monthly return factor
+	<math><mi>&omega;</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>&Omega;</mi></math>.
+</p>
+<math style="margin-left:10%;">
   <mrow>
-    <mtext>Cash Gain</mtext><mo>=</mo>
+    <msub><mi>C</mi><mi>n</mi></msub><mo>=</mo>
     <munderover><mo>&sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow>
       <mi>n</mi></munderover>
     <mrow>
-      <mrow><mo>(</mo><mi>q</mi><mo>-</mo><mi>p</mi>
-        <msup><mi>&pi;</mi><mrow><mo>-</mo><mi>m</mi></mrow></msup>
-        <mo>)</mo>
-      </mrow>
+      <mrow><mo>(</mo>
+				<mi>q</mi><msup><mi>&pi;</mi><mi>m</mi></msup><mo>-</mo><mi>p</mi>
+      <mo>)</mo></mrow>
       <msup><mi>&omega;</mi><mi>m</mi></msup>
     </mrow>
+</math>
+<p> Adjusting this sum of cash-flow returns through the
+	<i>n</i><sub>th</sub> month by an inflation factor (<i>&pi;</i>)
+	and scaling out the mortgage payment makes the cash dividend
+	independent of mortgage size and introduces the mortgage owner
+	preference factor (<i>c</i>) into our equations.
+</p>
+<math style="margin-left:10%;">
+  <mrow>
+    <mfrac><msub><mi>C'</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+		<mo>=</mo>
+		<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+    <munderover><mo>&sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow>
+      <mi>n</mi></munderover>
+    <mrow>
+      <mrow><mo>(</mo>
+				<msup><mi>c</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
+				<msup><mi>&pi;</mi><mi>m</mi></msup><mo>-</mo><mn>1</mn>
+      <mo>)</mo></mrow>
+      <msup><mi>&omega;</mi><mi>m</mi></msup>
+    </mrow>
+		<mspace width="2em"/><mtext>where</mtext><mspace width="1em"/>
+		<mi>c</mi><mo>=</mo><mfrac><mi>p</mi><mi>q</mi></mfrac>
+		<mo>=</mo>
+		<mfrac>
+			<msub><mi>V</mi><mtext>market</mtext></msub>
+			<msub><mi>V</mi><mtext>floor</mtext></msub>
+		</mfrac>
+</math>
+<p> Applying the 
+</p>
+<math style="margin-left:10%;">
+  <mrow>
+    <mfrac><msub><mi>C'</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+		<mo>=</mo>
+		<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+    <munderover><mo>&sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow>
+      <mi>n</mi></munderover>
+    <mrow>
+      <mrow><mo>(</mo>
+				<msup><mi>c</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
+				<msup><mi>&pi;</mi><mi>m</mi></msup><mo>-</mo><mn>1</mn>
+      <mo>)</mo></mrow>
+      <msup><mi>&omega;</mi><mi>m</mi></msup>
+    </mrow>
+		<mspace width="2em"/><mtext>where</mtext><mspace width="1em"/>
+		<mi>c</mi><mo>=</mo><mfrac><mi>p</mi><mi>q</mi></mfrac>
+		<mo>=</mo>
+		<mfrac>
+			<msub><mi>V</mi><mtext>market</mtext></msub>
+			<msub><mi>V</mi><mtext>floor</mtext></msub>
+		</mfrac>
 </math>
 <p> For consistent comparisons, we keep the mortgage-free cash flow
   (<math>q</math>) constant in terms of dollars at the beginning of
