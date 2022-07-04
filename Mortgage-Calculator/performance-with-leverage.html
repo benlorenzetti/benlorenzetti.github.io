@@ -39,34 +39,36 @@
 </p>
 <p> From the <a href="price-floor-circuit.html">price floor model</a>, the
 	mortgage-free cash-flow of a property (<i>q</i>) is expected to
-	grow with underlying appreciation factor (<i>&pi;</i>),
+	grow with an underlying appreciation factor (<i>&pi;</i>),
 	while the nominal mortgage payment (<i>p</i>) remains fixed.
 	Furthermore, unlike equity, cash-flow dividends can be
-	invested elsewhere for a some average monthly return (<i>&Omega;</i>)
-	with monthly return factor
+	invested elsewhere (one month later) for a some average monthly
+	return (<i>&Omega;</i>) with monthly return factor
 	<math><mi>&omega;</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>&Omega;</mi></math>.
+	We define <i>Q'<sub>n</sub></i> as the sum of all these nominal
+	('unadjusted') gains over months 1 to <i>n</i> of a mortgage.
 </p>
 <math style="margin-left:10%;">
   <mrow>
-    <msub><mi>C</mi><mi>n</mi></msub><mo>=</mo>
+    <msub><mi>Q'</mi><mi>n</mi></msub><mo>=</mo>
     <munderover><mo>&sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow>
       <mi>n</mi></munderover>
     <mrow>
       <mrow><mo>(</mo>
 				<mi>q</mi><msup><mi>&pi;</mi><mi>m</mi></msup><mo>-</mo><mi>p</mi>
       <mo>)</mo></mrow>
-      <msup><mi>&omega;</mi><mi>m</mi></msup>
+      <msup><mi>&omega;</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup>
     </mrow>
 </math>
-<p> Adjusting this sum of cash-flow returns through the
-	<i>n</i><sub>th</sub> month by an inflation factor (<i>&pi;</i>)
+<p> Adjusting this sum of cash-flow returns by an inflation factor
+	(<i>&pi;</i>)
 	and scaling out the mortgage payment makes the cash dividend
-	independent of mortgage size and introduces the mortgage owner
+	independent of mortgage size and introduces the mortgage-owner
 	preference factor (<i>c</i>) into our equations.
 </p>
 <math style="margin-left:10%;">
   <mrow>
-    <mfrac><msub><mi>C'</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+    <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac>
 		<mo>=</mo>
 		<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
     <munderover><mo>&sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow>
@@ -76,7 +78,7 @@
 				<msup><mi>c</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
 				<msup><mi>&pi;</mi><mi>m</mi></msup><mo>-</mo><mn>1</mn>
       <mo>)</mo></mrow>
-      <msup><mi>&omega;</mi><mi>m</mi></msup>
+      <msup><mi>&omega;</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup>
     </mrow>
 		<mspace width="2em"/><mtext>where</mtext><mspace width="1em"/>
 		<mi>c</mi><mo>=</mo><mfrac><mi>p</mi><mi>q</mi></mfrac>
@@ -86,30 +88,215 @@
 			<msub><mi>V</mi><mtext>floor</mtext></msub>
 		</mfrac>
 </math>
-<p> Applying the 
+<p> Applying the geometric series and normalizing to obtain a
+	closed form solution::
 </p>
 <math style="margin-left:10%;">
-  <mrow>
-    <mfrac><msub><mi>C'</mi><mi>n</mi></msub><mi>p</mi></mfrac>
-		<mo>=</mo>
-		<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
-    <munderover><mo>&sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow>
-      <mi>n</mi></munderover>
-    <mrow>
-      <mrow><mo>(</mo>
-				<msup><mi>c</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
-				<msup><mi>&pi;</mi><mi>m</mi></msup><mo>-</mo><mn>1</mn>
-      <mo>)</mo></mrow>
-      <msup><mi>&omega;</mi><mi>m</mi></msup>
-    </mrow>
-		<mspace width="2em"/><mtext>where</mtext><mspace width="1em"/>
-		<mi>c</mi><mo>=</mo><mfrac><mi>p</mi><mi>q</mi></mfrac>
-		<mo>=</mo>
+  <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+	<mo>=</mo>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+  <mrow><mo>[</mo>
+		<mfrac><mi>&pi;</mi><mi>c</mi></mfrac>
 		<mfrac>
-			<msub><mi>V</mi><mtext>market</mtext></msub>
-			<msub><mi>V</mi><mtext>floor</mtext></msub>
+			<mrow>
+				<msup><mrow><mo>(</mo><mi>&pi;</mi><mi>&omega;</mi><mo>)</mo></mrow><mi>n</mi></msup>
+				<mo>-</mo><mn>1</mn>
+			</mrow><mrow>
+				<mi>&pi;</mi><mi>&omega;</mi><mo>-</mo><mn>1</mn>
+			</mrow>
+		</mfrac><mo>-</mo>
+		<mfrac>
+			<mrow>
+				<msup><mi>&omega;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+			</mrow><mrow>
+				<mi>&omega;</mi><mo>-</mo><mn>1</mn>
+			</mrow>
 		</mfrac>
+  <mo>]</mo></mrow>
 </math>
+<br>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+	<mo>=</mo>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+  <mrow><mo>[</mo>
+		<mfrac><mi>&pi;</mi><mi>c</mi></mfrac>
+		<mfrac>
+			<mrow>
+				<msup><mrow><mo>(</mo><mi>&pi;</mi><mi>&omega;</mi><mo>)</mo></mrow><mi>n</mi></msup>
+			</mrow><mrow>
+				<mi>&pi;</mi><mi>&omega;</mi><mo>-</mo><mn>1</mn>
+			</mrow>
+		</mfrac><mo>+</mo>
+		<mfrac>
+			<mrow>
+				<mi>c</mi><mo>(</mo><mi>&pi;</mi><mi>&omega;</mi><mo>-</mo><mn>1</mn><mo>)</mo><mo>-</mo><mi>&Omega;</mi>
+			</mrow><mrow>
+				<mi>c</mi><mo>(</mo><mi>&pi;</mi><mi>&omega;</mi><mo>-</mo><mn>1</mn><mo>)</mo><mi>&Omega;</mi>
+			</mrow>
+		</mfrac><mo>-</mo>
+		<mfrac>
+			<mrow>
+				<msup><mi>&omega;</mi><mi>n</mi></msup>
+			</mrow><mrow>
+				<mi>&Omega;</mi>
+			</mrow>
+		</mfrac>
+  <mo>]</mo></mrow>
+	<mspace width="2em"/><mtext>for</mtext><mspace width="1em"/>
+	<mi>&Omega;</mi><mo>=</mo><mi>&omega;</mi><mo>-</mo><mn>1</mn>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+	<mo>=</mo>
+	<mfrac><mi>&pi;</mi><mi>c</mi></mfrac>
+	<mfrac>
+		<mrow>
+			<msup><mi>&omega;</mi><mi>n</mi></msup>
+		</mrow><mrow>
+			<mi>&pi;</mi><mi>&omega;</mi><mo>-</mo><mn>1</mn>
+		</mrow>
+	</mfrac><mo>+</mo>
+	<mfrac>
+		<mrow>
+			<mi>&pi;</mi><mi>&omega;</mi><mo>-</mo><mn>1</mn><mo>-</mo>
+			<mi>&Omega;</mi><mo>/</mo><mi>c</mi>
+		</mrow><mrow>
+			<mo>(</mo><mi>&pi;</mi><mi>&omega;</mi><mo>-</mo><mn>1</mn><mo>)</mo><mi>&Omega;</mi>
+		</mrow>
+	</mfrac>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+	<mo>-</mo>
+	<mfrac>
+		<mrow>
+			<msup><mi>&rho;</mi><mi>n</mi></msup>
+		</mrow><mrow>
+			<mi>&Omega;</mi>
+		</mrow>
+	</mfrac>
+	<mspace width="2em"/><mtext>for</mtext><mspace width="1em"/>
+	<mi>&rho;</mi><mo>=</mo><mfrac><mi>&omega;</mi><mi>&pi;</mi></mfrac>
+</math>
+<p> Next for
+	<math><mi>&Omega;</mi><mo>=</mo><mi>&omega;</mi><mo>-</mo><mn>1</mn></math>
+	and
+	<math><mi>&Pi;</mi><mo>=</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn></math>
+	we make an approximation
+</p>
+<math style="margin-left:10%;">
+	<mi>&pi;</mi><mi>&omega;</mi><mo>-</mo><mn>1</mn><mo>=</mo>
+	<mo>(</mo><mi>&Pi;</mi><mo>+</mo><mn>1</mn><mo>)</mo>
+	<mo>(</mo><mi>&Omega;</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>-</mo><mn>1</mn>
+	<mo>=</mo>
+	<mi>&Pi;</mi><mi>&Omega;</mi><mo>+</mo><mi>&Pi;</mi><mo>+</mo><mi>&Omega;</mi>
+	<mo>&approx;</mo><mi>&Pi;</mi><mo>+</mo><mi>&Omega;</mi>
+</math>
+<p> to avoid introducing a new variable to the summed dividend gain:
+</p>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+	<mo>&approx;</mo>
+	<mfrac><mi>&pi;</mi><mi>c</mi></mfrac>
+	<mfrac>
+		<mrow>
+			<msup><mi>&omega;</mi><mi>n</mi></msup>
+		</mrow><mrow>
+			<mi>&Omega;</mi><mo>+</mo><mi>&Pi;</mi>
+		</mrow>
+	</mfrac><mo>+</mo>
+	<mfrac>
+		<mrow>
+			<mi>&Omega;</mi><mo>+</mo><mi>&Pi;</mi><mo>-</mo>
+			<mi>&Omega;</mi><mo>/</mo><mi>c</mi>
+		</mrow><mrow>
+			<mi>&Omega;</mi><mo>(</mo><mi>&Omega;</mi><mo>+</mo><mi>&Pi;</mi><mo>)</mo>
+		</mrow>
+	</mfrac>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+	<mo>-</mo>
+	<mfrac>
+		<mrow>
+			<msup><mi>&rho;</mi><mi>n</mi></msup>
+		</mrow><mrow>
+			<mi>&Omega;</mi>
+		</mrow>
+	</mfrac>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+	<mo>&approx;</mo>
+	<mfrac><mi>&pi;</mi><mi>c</mi></mfrac>
+	<mfrac>
+		<mrow>
+			<msup><mi>&omega;</mi><mi>n</mi></msup>
+		</mrow><mrow>
+			<mi>&Omega;</mi><mo>+</mo><mi>&Pi;</mi>
+		</mrow>
+	</mfrac><mo>+</mo>
+	<mfrac>
+		<mrow>
+			<mn>1</mn><mo>+</mo><mfrac><mi>&Pi;</mi><mi>&Omega;</mi></mfrac>
+			<mo>-</mo><msup><mi>c</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
+		</mrow><mrow>
+			<mi>&Omega;</mi><mo>+</mo><mi>&Pi;</mi>
+		</mrow>
+	</mfrac>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+	<mo>-</mo>
+	<mfrac>
+		<mrow>
+			<msup><mi>&rho;</mi><mi>n</mi></msup>
+		</mrow><mrow>
+			<mi>&Omega;</mi>
+		</mrow>
+	</mfrac>
+</math>
+<p> Finally we rewrite the inflation-adjusted, normalized cash-flow gain after
+	<i>n</i> months in a form that will be more convenience later (for
+	Maclaurin series approximations).</p>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+	<mo>&approx;</mo>
+	<mrow><mo>(</mo>
+		<mfrac>
+			<mrow><mi>&pi;</mi><msup><mi>c</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow>
+			<mrow><mn>1</mn><mo>+</mo><mi>&Pi;</mi><mo>/</mo><mi>&Omega;</mi></mrow>
+		</mfrac>
+	<mo>)</mo></mrow>
+	<mfrac>
+		<mrow><msup><mi>&omega;</mi><mi>n</mi></msup></mrow><mi>&Omega;</mi>
+	</mfrac><mo>+</mo>
+	<mrow><mo>(</mo>
+		<mfrac>
+			<mrow>
+				<mn>1</mn><mo>+</mo><mfrac><mi>&Pi;</mi><mi>&Omega;</mi></mfrac>
+				<mo>-</mo><msup><mi>c</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
+			</mrow>
+			<mrow><mn>1</mn><mo>+</mo><mi>&Omega;</mi><mo>/</mo><mi>&Pi;</mi></mrow>
+		</mfrac>
+	<mo>)</mo></mrow>
+	<mfrac><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup><mi>&Pi;</mi></mfrac>
+	<mo>-</mo>
+	<mrow><mo>(</mo>
+		<mfrac><mi>&Rho;</mi><mi>&Omega;</mi></mfrac>
+	<mo>)</mo></mrow>
+	<mfrac><mrow><msup><mi>&rho;</mi><mi>n</mi></msup></mrow><mi>&Rho;</mi></mfrac>
+	<mspace width="2em"/><mtext>for</mtext><mspace width="1em"/>
+	<mtable>
+		<mtr>
+			<mtd><mi>&Pi;</mi><mo>=</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn></mtd>
+		</mtr><mtr>
+			<mtd><mi>&Omega;</mi><mo>=</mo><mi>&omega;</mi><mo>-</mo><mn>1</mn></mtd>
+		</mtr><mtr>
+			<mtd><mi>&Rho;</mi><mo>=</mo><mi>&rho;</mi><mo>-</mo><mn>1</mn></mtd>
+			<mtd><mtext>and</mtext></mtd>
+			<mtd><mi>&rho;</mi><mo>=</mo><mi>&omega;</mi><mo>/</mo><mi>&pi;</mi></mtd>
+		</mtr>
+	</mtable>
+</math>
+<hr>
 <p> For consistent comparisons, we keep the mortgage-free cash flow
   (<math>q</math>) constant in terms of dollars at the beginning of
   the loan period such that inflation appears as a deflation of the
