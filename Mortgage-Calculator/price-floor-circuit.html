@@ -89,13 +89,18 @@
 	have monthly profits in excess of the the mortgage payment,
 	i.e. positive cash flow.
 </p>
-<img src="20220620-price-floor-model.png" width="75%">
+<img src="20220709-price-floor-model.png" width="75%">
 <p> In a well functioning market with mortgage lending available,
 	you would not expect to find any usable homes at this price
 	because if home building/maintaining were this inexpensive
 	relative to rents many would be building or buying to get out
 	of renting. Therefore, resulting from completing the circuit with
-	<math><msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mi>p</mi></math>,
+	<span style="white-space:nowrap;">
+		<math>
+			<msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mi>p</mi>
+			<mo>(</mo><mn>1</mn><mo>+</mo><msub><mi>T</mi><mtext>inc</mtext></msub><mo>)</mo>
+		</math>,
+	</span>
 	we call this value <i>V<sub>floor</sub></i>, and we call this
 	floor value of the monthly mortgage payment <i>q</i>.
 </p>
@@ -103,21 +108,23 @@
 	<msub><mi>V</mi><mtext>floor</mtext></msub><mo>=</mo>
 	<mfrac>
 		<mrow>
-			<msub><mi>I</mi><mtext>rent</mtext></msub><mo>-</mo>
+			<mo>(</mo><mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>vac</mtext></msub><mo>)</mo>
+			<msub><mi>I</mi><mtext>rent</mtext></msub>
+			<mo>-</mo>
 			<msub><mi>i</mi><mtext>expenses</mtext></msub>
 		</mrow><mrow>
-			<msub><mi>G</mi><mtext>policy</mtext></msub><mo>+</mo>
+			<msub><mi>G</mi><mtext>poli</mtext></msub><mo>+</mo>
 			<msub><mi>G</mi><mtext>prop</mtext></msub>
 		</mrow>
 	</mfrac>
 	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
-	<msub><mi>G</mi><mtext>policy</mtext></msub><mo>=</mo>
+	<msub><mi>G</mi><mtext>poli</mtext></msub><mo>=</mo>
 	<mfrac>
 		<mrow><mn>1</mn><mo>-</mo><mi>dp</mi></mrow>
 		<mrow>
 			<msub><mi>R</mi><mi>N</mi></msub>
 				<mrow><mo>(</mo>
-					<mn>1</mn><mo>-</mo><mfrac><mi>T</mi><mn>12</mn></mfrac>
+					<mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>inc</mtext></msub>
 				<mo>)</mo></mrow>
 		</mrow>
 	</mfrac>
@@ -126,9 +133,12 @@
 <math style="margin-left:10%;">
 	<mi>q</mi><mo>=</mo>
 	<mrow><mo>(</mo>
-		<mn>1</mn><mo>-</mo><mfrac><mi>T</mi><mn>12</mn></mfrac>
+		<mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>inc</mtext></msub>
 	<mo>)</mo></mrow>
 	<mrow><mo>(</mo>
+		<mo>(</mo>
+			<mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>vac</mtext></msub>
+		<mo>)</mo>
 		<msub><mi>I</mi><mtext>rent</mtext></msub><mo>-</mo><msub><mi>i</mi><mtext>expenses</mtext></msub>
 	<mo>)</mo></mrow>
 	<mrow><mo>(</mo>
