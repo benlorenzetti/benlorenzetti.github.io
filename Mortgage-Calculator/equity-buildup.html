@@ -23,7 +23,7 @@
 	     (adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
 </header>
-<aside>
+<aside style="background-image: Linear-gradient(to top, #a02040, #404040);">
 	<a href="index.html">
 		<img width="252px;" alt="Snth Logo" src="../Brand/20220619-pyramid.png">
 	</a>
@@ -31,59 +31,7 @@
 <div id="vertical-div-containing-article-and-navigation">
 <hr>
 <article>
-<h1>Mortgage Preference</h1>
-
-<p> For fixed rate mortgages, the principal (<i>P</i>) remaining after the
-	<i>n</i><sub>th</sub>
-	monthly payment is defined in terms of the previous month's principal,
-	the monthly interest rate (<i>i</i>) and monthly payment (<i>p</i>).
-</p>
-<math style="margin-left:10%">
-	<msub><mi>P</mi><mi>n</mi></msub><mo>=</mo><mi>i</mi>
-	<msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
-	<mo>-</mo><mi>p</mi>
-</math>
-<p> The <a href="index.html">mortgage calculator</a> is based a
-  geometric series for this sequence over a mortgage term of
-	(<i>N</i>) months to directly calculate the principal remaining in any
-	given month. The result was:
-</p>
-<math style="margin-left: 10%;">
-	<mfrac><msub><mi>P</mi><mi>n</mi></msub><mi>p</mi></mfrac>
-	<mo>=</mo>
-	<mrow><mo>{</mo>
-		<mtable>
-			<mtr>
-				<mtd>
-					<mfrac>
-						<mrow><mn>1</mn><mo>-</mo>
-							<msup><mi>i</mi>
-								<mrow><mo>(</mo><mi>n</mi><mo>-</mo><mi>N</mi><mo>)</mo><mo>/</mo><mtext>months</mtext></mrow>
-							</msup>
-						</mrow>
-						<mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
-					</mfrac><mtext>months</mtext>
-					<mtext>,</mtext>
-				</mtd><mtd>
-					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
-				</mtd>
-			</mtr><mtr>
-				<mtd>
-					<mi>N</mi><mo>-</mo><mi>n</mi><mtext>,</mtext></mtext><mspace width="1em"/>
-				</mtd>
-				<mtd><mi>i</mi><mo>=</mo><mn>1</mn></mtd>
-			</mtr>
-		</mtable>
-	</mrow>
-</math>
-<p> Substituting
-	<math><mi>n</mi><mo>=</mo><mn>0</mn></math> into this equation
-	demonstrates a surprising (unsurprising) result:
-	the initial mortgage pricipal (<i>P<sub>0</sub></i>) and monthly
-	payment (<i>p</i>) are related linearly by an independent constant
-	(<i>R<sub>N</sub></i>)
-	fixed by the monthly interest factor (<i>i</i>) and loan period (<i>N</i>).
-</p>
+<h1>Mortgage Equity Gain</h1>
 <p> The prior <a href="index.html">two articles</a> used the linearity of
 	<math>
 		<mfrac><msub><mi>P</mi><mn>0</mn></msub><mi>p</mi></mfrac>
@@ -95,52 +43,101 @@
 	a previously unelaborated-upon scalar (<i>c</i>).
 	This scalar suggests that Americans have a relatively
 	consistent preference (i.e. pay more) for mortgages and their associated
-	costs than for rent.
-	(for assumptions used in the graph below, see the
-	<a href="price-to-rent-ratio.html">P/R ratio</a>).
+	costs than for renting an equivalent home.
 </p>
 <img src="mortgage-preference-scalar.png">
-<p> To make use of this scalar (<i>c</i>) we need to account for the
+<p> To make use of this scalar (<i>c</i>) we need to account for a
 	major difference between owning with a mortgage and
-	renting&mdash;building up equity in the loan.
+	renting&mdash;building up equity in a loan.
 </p>
-<h2>Nominal Equity Gain from a Loan</h2>
-<p> The nominal equity gain in the <i>n</i><sub>th</sub>
-	month of a mortgage is due
-	to the difference in the balance owed between months <i>n-1</i> and <i>n</i>
+<p> For fixed rate mortgages, the principal (<i>P</i>) remaining after the
+	<i>m</i><sub>th</sub>
+	monthly payment is defined in terms of the previous month's principal,
+	the monthly interest rate (<i>i</i>) and monthly payment (<i>p</i>).
+</p>
+<math style="margin-left:10%">
+	<msub><mi>P</mi><mi>m</mi></msub><mo>=</mo><mi>i</mi>
+	<msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<mo>-</mo><mi>p</mi>
+</math>
+<p> In the
+	<a href="">mortgage calculator geometric series</a> we found the
+	closed form solution for the principal remaining after the
+	<i>m<sup>th</sup></i> month of an <i>N</i>-month mortgage.
+</p>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>P</mi><mi>m</mi></msub><mi>p</mi></mfrac>
+	<mo>=</mo>
+	<mrow><mo>{</mo>
+		<mtable>
+			<mtr>
+				<mtd>
+					<mfrac>
+						<mrow><mn>1</mn><mo>-</mo>
+							<msup><mi>i</mi>
+								<mrow><mo>(</mo><mi>m</mi><mo>-</mo><mi>N</mi><mo>)</mo><mo>/</mo><mtext>months</mtext></mrow>
+							</msup>
+						</mrow>
+						<mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+					</mfrac><mtext>months</mtext>
+					<mtext>,</mtext>
+				</mtd><mtd>
+					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
+				</mtd>
+			</mtr><mtr>
+				<mtd>
+					<mi>N</mi><mo>-</mo><mi>m</mi><mtext>,</mtext></mtext><mspace width="1em"/>
+				</mtd>
+				<mtd><mi>i</mi><mo>=</mo><mn>1</mn></mtd>
+			</mtr>
+		</mtable>
+	</mrow>
+</math>
+<p> The nominal equity gain in the <i>m</i><sup>th</sup>
+	month from the mortgage is to the difference in the balance owed between
+	months <i>m-1</i> and <i>m</i>
 	and due to exposure to inflation (home appreciation) of the
 	remaining loan liability (where <i>&pi;</i> is monthly home appreciation
   factor).
 </p>
 <math style="margin-left:10%;">
 	<mo>&Delta;</mo>
-	<msub><mi>E</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn><mo>,</mo><mi>n</mi></mrow></msub>
-	<mo>=</mo><msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
-	<mo>-</mo><msub><mi>P</mi><mi>n</mi></msub>
+	<msub><mi>E</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn><mo>,</mo><mi>m</mi></mrow></msub>
+	<mo>=</mo><msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<mo>-</mo><msub><mi>P</mi><mi>m</mi></msub>
 	<mo>+</mo><mo>(</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn><mo>)</mo>
-	<msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 </math>
 <br>
 <math style="margin-left:10%;">
 	<mo>&Delta;</mo>
-	<msub><mi>E</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn><mo>,</mo><mi>n</mi></mrow></msub>
-	<mo>=</mo><msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<msub><mi>E</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn><mo>,</mo><mi>m</mi></mrow></msub>
+	<mo>=</mo><msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 	<mo>-</mo><mo>(</mo>
-		<mi>i</mi><msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+		<mi>i</mi><msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 		<mo>-</mo><mi>p</mi>
 	<mo>)</mo>
 	<mo>+</mo><mo>(</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn><mo>)</mo>
-	<msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 </math>
 <br>
 <math style="margin-left:10%;">
 	<mo>&Delta;</mo>
-	<msub><mi>E</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn><mo>,</mo><mi>n</mi></mrow></msub>
-	<mo>=</mo><msub><mi>P</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<msub><mi>E</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn><mo>,</mo><mi>m</mi></mrow></msub>
+	<mo>=</mo><msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 	<mo>(</mo>
 		<mn>1</mn><mo>-</mo><mi>i</mi><mo>+</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn>
 	<mo>)</mo>
 	<mo>+</mo><mi>p</mi>
+</math>
+<br>
+<math style="margin-left:10%;">
+	<mo>&Delta;</mo>
+	<msub><mi>E</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn><mo>,</mo><mi>m</mi></mrow></msub>
+	<mo>=</mo><mi>p</mi><mo>-</mo><mi>R</mi>
+	<msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
+	<mi>R</mi><mo>=</mo><mi>i</mi><mo>-</mo><mi>&pi;</mi>
 </math>
 <p> Substituting the closed form solution for fixed rate mortgages
 	and defining new variables for nominal monthly interest (<i>I</i>) and
@@ -149,7 +146,7 @@
 </p>
 <math style="margin-left: 10%;">
 	<mfrac>
-		<mrow><mo>&Delta;</mo><mi><msub><mi>E</mi><mi>n</mi></msub></mrow>
+		<mrow><mo>&Delta;</mo><mi><msub><mi>E</mi><mi>m</mi></msub></mrow>
 		<mi>p</mi>
 	</mfrac>
 	<mo>=</mo>
@@ -163,7 +160,7 @@
 						<mn>1</mn><mo>-</mo>
 						<msup><mi>i</mi>
 							<mrow>
-								<mo>(</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo>-</mo><mi>N</mi><mo>)</mo>
+								<mo>(</mo><mi>m</mi><mo>-</mo><mn>1</mn><mo>-</mo><mi>N</mi><mo>)</mo>
 								<mo>/</mo><mtext>months</mtext>
 							</mrow>
 						</msup>
@@ -174,8 +171,8 @@
 				</mtd>
 			</mtr><mtr>
 				<mtd>
-					<mn>1</mn><mo>+</mo><mi>&Pi;</mi>
-					<mo>(</mo><mi>N</mi><mo>-</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>)</mo>
+					<mn>1</mn><mo>+</mo><mi>&pi;</mi><mi>&Pi;</mi>
+					<mo>(</mo><mi>N</mi><mo>-</mo><mi>m</mi><mo>+</mo><mn>1</mn><mo>)</mo>
 					<mo>/</mo><mtext>months</mtext>
 					<mtext>,</mtext></mtext>
 				</mtd>
@@ -187,25 +184,348 @@
 	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
 	<mtable>
 		<mtr>
+			<mtd><mi>R</mi><mo>=</mo><mi>i</mi><mo>-</mo><mi>&pi;</mi></mtd>
+		</mtr><mtr>
 			<mtd><mi>I</mi><mo>=</mo><mi>i</mi><mo>-</mo><mn>1</mn></mtd>
 		</mtr><mtr>
-			<mtd><mi>&Pi;</mi><mo>=</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn></mtd>
-		</mtr><mtr>
-			<mtd><mi>R</mi><mo>=</mo><mi>i</mi><mo>-</mo><mi>&pi;</mi></mtd>
+			<mtd><mi>&Pi;</mi><mo>=</mo><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mtd>
 		</mtr>
 	</mtable>
 </math>
 <p> for
-	<math><mi>n</mi><mo>&isin;</mo><mo>[</mo><mn>1</mn><mo>...</mo><mi>N</mi><mo>]</mo></math>.
-	Summing the monthly equity gains from the first to <i>n</i><sub>th</sub>
-	month and once again using a geometric series (and aritmetic series)
-	yields the nominal equity buildup
-	<mi>&Sigma;<sub>n</sub></i> due to a fixed rate mortgage:
+	<math><mi>m</mi><mo>&isin;</mo><mo>[</mo><mn>1</mn><mo>...</mo><mi>N</mi><mo>]</mo></math>.
 </p>
+<p>	It is desirable to discount these nominal equity increases
+	for inflation such that home values at any time <i>m</i> are priced in
+	terms of dollars at the initial purchase/loan.
+	Assume the burden of the monthly mortgage payment and principal remaining
+	is reduced by the inflation factor (<i>&pi;</i>) each month.
+	We will focus on the case
+	<span style="white-space:nowrap;"><i>i &ne; 1</i></span>.
+</p>
+<math style="margin-left: 10%;">
+	<mfrac>
+		<mrow><mo>&Delta;</mo><mi><msub><mi>E'</mi><mi>m</mi></msub></mrow>
+		<mi>p</mi>
+	</mfrac>
+	<mo>=</mo>
+	<mrow><mo>(</mo>
+		<mn>1</mn><mo>-</mo><mfrac><mi>R</mi><mi>I</mi></mfrac>
+	<mo>)</mo></mrow>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>m</mi></mrow></msup>
+	<mo>+</mo>
+	<mrow><mo>(</mo>
+		<mfrac>
+			<mi>R</mi>
+			<mrow><mi>&pi;</mi><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
+		</mfrac>
+	<mo>)</mo></mrow>
+	<msup><mi>r</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup>
+	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
+	<mi>r</mi><mo>=</mo><mfrac><mi>i</mi><mi>&pi;</mi></mfrac>
+</math>
+<p> Summing the inflation-discounted monthly equity gains from the
+	first to <i>n</i><sup>th</sup>
+	month and once again using a geometric series (and aritmetic series)
+	yields the inflation-discounted equity buildup
+	<mi>&Sigma;'<sub>n</sub></i> from the fixed rate mortgage:
+</p>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
+	<munderover><mo>&Sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+	<mfrac>
+		<mrow><mo>&Delta;</mo><mi><msub><mi>E'</mi><mi>m</mi></msub></mrow>
+		<mi>p</mi>
+	</mfrac>
+</math>
+<br>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
+	<mfrac><mn>1</mn><mi>&pi;</mi></mfrac>
+	<mrow><mo>[</mo>
+		<mrow><mo>(</mo>
+			<mn>1</mn><mo>-</mo><mfrac><mi>R</mi><mi>I</mi></mfrac>
+		<mo>)</mo></mrow>
+		<munderover><mo>&Sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+		<msup><mi>&pi;</mi><mrow><mn>1</mn><mo>-</mo><mi>m</mi></mrow></msup>
+		<mo>+</mo>
+		<mrow><mo>(</mo>
+			<mfrac><mi>R</mi>
+				<mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow></mfrac>
+		<mo>)</mo></mrow>
+		<munderover><mo>&Sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+		<msup><mi>r</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup>
+	<mo>]</mo></mrow>
+</math>
+<p> Letting <math><mi>k</mi><mo>=</mo><mi>m</mi><mo>-</mo><mn>1</mn></math>,
+</p>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
+	<mfrac><mn>1</mn><mi>&pi;</mi></mfrac>
+	<mrow><mo>[</mo>
+		<mrow><mo>(</mo>
+			<mn>1</mn><mo>-</mo><mfrac><mi>R</mi><mi>I</mi></mfrac>
+		<mo>)</mo></mrow>
+		<munderover><mo>&Sum;</mo>
+			<mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow>
+			<mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>
+		</munderover>
+		<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>k</mi></mrow></msup>
+		<mo>+</mo>
+		<mrow><mo>(</mo>
+			<mfrac><mi>R</mi>
+				<mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow></mfrac>
+		<mo>)</mo></mrow>
+		<munderover><mo>&Sum;</mo>
+			<mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow>
+			<mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>
+		</munderover>
+		<msup><mi>r</mi><mi>k</mi></msup>
+	<mo>]</mo></mrow>
+</math>
+<br>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
+	<mfrac><mn>1</mn><mi>&pi;</mi></mfrac>
+	<mrow><mo>[</mo>
+		<mrow><mo>(</mo>
+			<mn>1</mn><mo>-</mo><mfrac><mi>R</mi><mi>I</mi></mfrac>
+		<mo>)</mo></mrow>
+		<mfrac>
+			<mrow><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow>
+			<mrow><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow>
+		</mfrac>
+		<mo>+</mo>
+		<mrow><mo>(</mo>
+			<mfrac><mi>R</mi>
+				<mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow></mfrac>
+		<mo>)</mo></mrow>
+		<mfrac>
+			<mrow><msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
+			<mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow>
+		</mfrac>
+	<mo>]</mo></mrow>
+</math>
+<br>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
+	<mfrac><mn>1</mn><mi>&pi;</mi></mfrac>
+	<mrow><mo>[</mo>
+		<mrow><mo>(</mo>
+			<mn>1</mn><mo>-</mo><mfrac><mi>R</mi><mi>I</mi></mfrac>
+		<mo>)</mo></mrow>
+		<mfrac>
+			<mrow><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow>
+			<mi>&Pi;</mi>
+		</mfrac>
+		<mo>+</mo>
+		<mfrac><mn>1</mn><mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow></mfrac>
+		<mrow><mo>(</mo>
+			<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+		<mo>)</mo></mrow>
+	<mo>]</mo></mrow>
+	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
+	<mi>&Pi;</mi><mo>=</mo><mn>1</mn><mo>-</mo>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
+</math>
+<br>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
+	<mfrac><mn>1</mn><mrow><mi>&pi;</mi><mi>I</mi></mrow></mfrac>
+	<mrow><mo>[</mo>
+		<mrow><mo>(</mo>
+			<mi>I</mi><mo>-</mo><mi>R</mi>
+		<mo>)</mo></mrow>
+		<mfrac>
+			<mrow><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow>
+			<mi>&Pi;</mi>
+		</mfrac>
+		<mo>+</mo>
+		<msup><mi>i</mi><mrow><mo>-</mo><mi>N</mi></mrow></msup>
+		<mrow><mo>(</mo>
+			<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+		<mo>)</mo></mrow>
+	<mo>]</mo></mrow>
+</math>
+<br>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
+	<mfrac><mn>1</mn><mrow><mi>I</mi></mrow></mfrac>
+	<mrow><mo>[</mo>
+		<mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+		<mo>+</mo>
+		<mfrac>
+			<mn>1</mn>
+			<mrow><mi>&pi;</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
+		</mfrac>
+		<mrow><mo>(</mo>
+			<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+		<mo>)</mo></mrow>
+	<mo>]</mo></mrow>
+</math>
+<p> Recombining this solution with the other case <i>i = 1</i>,
+</p>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>&Sigma;'</mi><mi><mi>n</mi></msub><mi>p</mi></mfrac>
+	<mo>=</mo>
+	<mrow><mo>{</mo>
+		<mtable>
+			<mtr>
+				<mtd>
+					<mrow>
+						<mfrac><mn>1</mn><mrow><mi>I</mi></mrow></mfrac>
+						<mrow><mo>(</mo>
+							<mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+							<mo>+</mo>
+							<mfrac>
+								<mn>1</mn>
+								<mrow><mi>&pi;</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
+							</mfrac>
+							<mrow><mo>(</mo>
+								<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+							<mo>)</mo></mrow>
+						<mo>)</mo></mrow>
+					</mrow>
+					<mtext>,</mtext>
+				</mtd><mtd>
+					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
+				</mtd>
+			</mtr><mtr>
+				<mtd>
+
+				</mtd><mtd>
+					<mi>i</mi><mo>=</mo><mn>1</mn>
+				</mtd>
+			</mtr>
+		</mtable>
+	</mrow>
+	<mspace width="2em"/><mtext>for</mtext><mspace width="2em"/>
+	<mtable>
+		<mtr>
+			<mtd><mi>r</mi><mo>=</mo><mi>i</mi><mo>/</mo><mi>&pi;</mi></mtd>
+		</mtr><mtr>
+			<mtd><mi>I</mi><mo>=</mo><mi>i</mi><mo>-</mo><mn>1</mn></mtd>
+		</mtr>
+	</mtable>
+</math>
+<p> The semantic description of this equation is a little tricky. It
+	describes the real equity change <em>from the mortgage</em>
+	due to paying off and inflation-discounting principal while the underlying
+	portion of the asset owned with debt maintains constant value. Further, this
+	mortgage equity gain is adjusted for inflation into dollars equivalent to
+	those at loan origination.
+</p>
+<h1>Phantom Capital Gains</h1>
+<p> We have calculated equity buildup from paying off the mortgage plus
+	capital gains from inflation of the mortgaged portion of property,
+	but what about capital gains of the owned portion of propery due to
+	inflation and appreciation?
+</p>
+<p>	It can be shown that, solving a similar capital gain summation adjusted
+	for inflation, the following equation is true:
+</p>
+<math>
+	<msub><mi>E'</mi><mtext>Inflation Discounted Equity Dollars Paid/Gained</mtext></msub>
+	<mo>+</mo><msub><mi>&Sigma;'</mi><mtext>Inflation Discounted Equity Capital Gains</mtext></msub>
+	<mo>=</mo>
+	<msub><mi>E</mi><mtext>"Inflation Adjusted" Equity Purchased</mtext></msub>
+</math>
+<p> Consider the capital gains from the portion of property owned
+	by the down payment (<i>E<sub>0</sub></i>), the nominal equity gain
+	after the first n months due to inflation would be
+</p>
+<math style="margin-left:10%;">
+	<msub><mi>&Sigma;</mi><mtext>ECG(n)</mtext></msub>
+	<mo>=</mo>
+	<msub><mi>E</mi><mn>0</mn></msub>
+	<mo>(</mo><msup><mi>&pi;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn><mo>)</mo>
+</math>
+<p> Adjusting this gain for inflation to make it equivalent in value to
+	dollars at the beginning of the loan period,
+</p>
+<math style="margin-left:10%;">
+	<msub><mi>&Sigma;'</mi><mtext>ECG(n)</mtext></msub>
+	<mo>=</mo>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+	<msub><mi>E</mi><mn>0</mn></msub>
+	<mo>(</mo><msup><mi>&pi;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn><mo>)</mo>
+</math>
+<br>
+<math style="margin-left:10%;">
+	<msub><mi>&Sigma;'</mi><mtext>ECG(n)</mtext></msub>
+	<mo>=</mo>
+	<msub><mi>E</mi><mn>0</mn></msub>
+	<mo>(</mo><mn>1</mn><mo>-</mo>
+		<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+	<mo>)</mo>
+</math>
+<p> There remains the nominal base value that you would not get taxed for,
+	but after discounting for inflation its real value has decreased.
+</p>
+<math style="margin-left:10%;">
+	<msub><mi>E'</mi><mtext>EDP(n)</mtext></msub>
+	<mo>=</mo>
+	<msub><mi>E</mi><mn>0</mn></msub>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+</math>
+<p> Summing the discounted value of the initial down payment and capital gains
+	from this portion of the property valuation due to inflation shows that,
+	although the taxman may disagree, there were no real capital gains here.
+</p>
+<math style="margin-left:10%;">
+	<msub><mi>E'</mi><mtext>EDP(n)</mtext></msub>
+	<mo>+</mo>
+	<msub><mi>&Sigma;'</mi><mtext>ECG(n)</mtext></msub>
+	<mo>=</mo>
+	<msub><mi>E</mi><mn>0</mn></msub>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+	<mo>+</mo>
+	<msub><mi>E</mi><mn>0</mn></msub>
+	<mo>(</mo><mn>1</mn><mo>-</mo>
+		<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+	<mo>)</mo>
+</math>
+<br>
+<math style="margin-left:10%;">
+	<msub><mi>E'</mi><mtext>EDP(n)</mtext></msub>
+	<mo>+</mo>
+	<msub><mi>&Sigma;'</mi><mtext>ECG(n)</mtext></msub>
+	<mo>=</mo>
+	<msub><mi>E</mi><mn>0</mn></msub>
+</math>
+<p> In conclusion, if home prices appreciate only with inflation, expressing
+	all dollar values in "inflation back-adjusted" dollars keeps the numeric
+	value of equity built-up from the mortgage and from the down payment steady over
+	time.
+</p>
+<p> What if home prices appreciate faster than inflation?
+	This series breaks home price appreciation into three components:
+</p>
+<ol>
+	<li>Underlying rent inflation (&pi;), as determined by market measurement,</li>
+	<li>A scalar (<i>R<sub>th</sub></i>) predicted by interest rates and
+		other inputs to the <a href="price-floor-circuit.html">price model</a> and
+	</li>
+	<li>A market forces/human factor term (<i>c</i>), which we call the
+		mortgage preference factor.
+	</li>
+</ol>
+<p> This series assumes only underlying inflation
+	(affecting rents and other material inputs to the price model)
+	to calculate capital gains because both interest rates and mortgage
+	preference factors are expected to oscillate and should be accounted for
+	but not counted upon to cause appreciation over the long term.
+</p>
+<p> Put politically, the Federal Reserve
+	may make you feel richer or poorer and scale wealth inequality in
+	nominal terms, but in the long term it is better to account for these
+	actions so you can survive them, take advantage of them, and vote
+	intelligently.
+</p>
+<hr>
 <math style="margin-left: 10%;">
 	<mfrac><msub><mi>&Sigma;</mi><mi><mi>n</mi></msub><mi>p</mi></mfrac>
 	<mo>=</mo>
-
 	<mrow><mo>{</mo>
 		<mtable>
 			<mtr>
@@ -244,7 +564,6 @@
 				<mtd><mi>i</mi><mo>=</mo><mn>1</mn></mtd>
 			</mtr>
 		</mtable>
-
 		<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
 		<mtable>
 			<mtr>
@@ -256,7 +575,7 @@
 			</mtr>
 		</mtable>
 	</mrow>
-
+</math>
 <p> for
 	<math><mi>n</mi><mo>&isin;</mo><mo>[</mo><mn>1</mn><mo>...</mo><mi>N</mi><mo>]</mo></math>.
 	This summary equation shows that, similar to the key result

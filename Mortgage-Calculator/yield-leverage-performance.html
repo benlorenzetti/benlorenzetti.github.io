@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Mortgage Yield, Leverage and Performance</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/ben.css">
+	<script data-ad-client="ca-pub-2647559998401134" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+<div id="horizontal-div-containing-entire-page">
+<header>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2647559998401134"
+	     crossorigin="anonymous"></script>
+	<!-- header-ad -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-2647559998401134"
+	     data-ad-slot="2556218560"
+	     data-ad-format="auto"
+	     data-full-width-responsive="true"></ins>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</header>
+<aside style="background-image: Linear-gradient(to top, #a02040, #404040);">
+	<a href="index.html">
+		<img width="252px;" alt="Snth Logo" src="../Brand/20220619-pyramid.png">
+	</a>
+</aside>
+<div id="vertical-div-containing-article-and-navigation">
+<hr>
+<article>
+<h1>Real Performance with Mortgage Leverage</h1>
+<p> This is the sixth part of a <a href="index.html">series</a>
+	presenting the assumptions and equations behind the
+	<a href="mortgage-calculator.html">mortgage calculator</a>.
+	The fourth article found
+	a function for the <a href="equity-buildup.html">buildup of real equity
+	from a mortgage</a> (<i>&Sigma;'<sub>n</sub></i>) by its
+	<i>n<sup>th</sup></i> month,
+	which was adjusted for inflation to be in terms of dollars at the
+	beginning of the loan period.
+</p>
+<math style="margin-left: 10%;">
+	<mfrac><msub><mi>&Sigma;'</mi><mi><mi>n</mi></msub><mi>p</mi></mfrac>
+	<mo>=</mo>
+	<mrow><mo>{</mo>
+		<mtable>
+			<mtr>
+				<mtd>
+					<mrow>
+						<mfrac><mn>1</mn><mrow><mi>I</mi></mrow></mfrac>
+						<mrow><mo>(</mo>
+							<mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+							<mo>+</mo>
+							<mfrac>
+								<mn>1</mn>
+								<mrow><mi>&pi;</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
+							</mfrac>
+							<mrow><mo>(</mo>
+								<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+							<mo>)</mo></mrow>
+						<mo>)</mo></mrow>
+					</mrow>
+					<mtext>,</mtext>
+				</mtd><mtd>
+					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
+				</mtd>
+			</mtr><mtr>
+				<mtd>
+
+				</mtd><mtd>
+					<mi>i</mi><mo>=</mo><mn>1</mn>
+				</mtd>
+			</mtr>
+		</mtable>
+	</mrow>
+	<mspace width="2em"/><mtext>for</mtext><mspace width="2em"/>
+	<mtable>
+		<mtr>
+			<mtd><mi>r</mi><mo>=</mo><mi>i</mi><mo>/</mo><mi>&pi;</mi></mtd>
+		</mtr><mtr>
+			<mtd><mi>I</mi><mo>=</mo><mi>i</mi><mo>-</mo><mn>1</mn></mtd>
+		</mtr>
+	</mtable>
+</math>
+<p> The fifth article found a function for the
+	<a href="cash-flow-power.html">buildup of real wealth from monthly
+	net cash flow</a> (<i>Q<sub>n</sub></i>) after the <i>n<sup>th</sup></i>
+	month, including
+	the opportunity cost of a monthly mortgage payment vs. owning the property
+	mortgage-free.
+</p>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
+  <mrow>
+    <mfrac>
+      <mrow>
+        <msup><mi>&omega;</mi><mi>n</mi></msup>
+        <mo>-</mo><mn>1</mn>
+      </mrow><mrow>
+        <mi>c</mi><mi>&Omega;</mi>
+      </mrow>
+    </mfrac>
+    <mo>-</mo>
+    <mfrac>
+      <mrow>
+        <msup><mi>&gamma;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+      </mrow><mrow>
+      	<mi>&pi;</mi><mi>&Gamma;</mi>
+			</mrow>
+    </mfrac>
+  </mrow>
+  <mspace width="1.5em"/><mtext>where</mtext><mspace width="1.5em"/>
+	<mtable>
+		<mtr>
+			<mtd>
+				<mi>&Omega;</mi><mo>=</mo><mi>&omega;</mi><mo>-</mo><mn>1</mn>
+      </mtd>
+		</mtr><mtr>
+			<mtd>
+				<mi>&gamma;</mi><mo>=</mo><mi>&omega;</mi><mo>/</mo><mi>&pi;</mi>
+			</mtd>
+			<mtd><mspace width="1em"/><mtext>and</mtext><mspace width="1em"/></mtd>
+			<mtd>
+				<mi>c</mi><mo>=</mo><mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+				<mfrac><msub><mi>V</mi><mtext>sales price</mtext></msub>
+					<msub><mi>V</mi><mtext>price floor</mtext></msub>
+				</mfrac>
+			</mtd>
+		</mtr><mtr>
+			<mtd>
+				<mi>&Gamma;</mi><mo>=</mo><mi>&gamma;</mi><mo>-</mo><mn>1</mn>
+			</mtd>
+		</mtr>
+	</mtable>
+</math>
+<p> The fractional performance over
+  <math><mi>n</mi></math> months, from purchase
+	to sale, includes the real equity built-up from the mortgage
+	(<i>&Sigma;'<sub>n</sub></i>), real wealth	gained from monthly cash flows
+	(<i>Q<sub>n</sub></i>), capital gains from equity appreciation,
+	plus the initial equity owned (<i>E<sub>0</sub></i>)
+	and less a selling transaction fee (<i>F<sub>2</sub></i>),
+	all relative to the down payment and initial purchase costs
+	(<span style="white-space:nowrap;"><i>E<sub>0</sub> + F<sub>1</sub></i></span>).
+</p>
+<math style="margin-left:10%;">
+  <mrow>
+    <mrow><msup><mi>y</mi><mi>n</mi></msup></mrow>
+    <mo>=</mo>
+    <mrow><mfrac>
+      <mrow>
+        <msub><mi>&Sigma;'</mi><mi>n</mi></msub>
+        <mo>+</mo>
+        <msub><mi>Q</mi><mi>n</mi></msub>
+        <mo>+</mo>
+				<msub><mi>&Sum;</mi><mtext>Equity Appreciation Capital Gains</mtext></msub>
+				<mo>+</mo>
+        <mrow><msub><mi>E</mi><mn>0</mn></msub>
+              <mo>-</mo><msub><mi>F</mi><mn>2</mn></msub>
+        </mrow>
+      </mrow><mrow>
+        <msub><mi>E</mi><mn>0</mn></msub>
+        <mo>+</mo><msub><mi>F</mi><mn>1</mn></msub>
+      </mrow>
+    </mfrac></mrow>
+  </mrow>
+</math>
+<p>	All of these values is expressed in real terms, inflation adjusted to be
+	equivalent with dollars at the beginning of the loan period. Equity owned
+	is assumed to appreciate at the rate of underlying rent inflation
+	(<i>&pi;</i>), therefore there are no capital gains from equity appreciation
+	in when expressed in real (inflation adjusted) terms.
+</p>
+<math style="margin-left:10%;">
+  <mrow>
+    <mrow><msup><mi>y</mi><mi>n</mi></msup></mrow>
+    <mo>=</mo>
+    <mrow><mfrac>
+      <mrow>
+        <msub><mi>&Sigma;'</mi><mi>n</mi></msub>
+        <mo>+</mo>
+        <msub><mi>Q</mi><mi>n</mi></msub>
+				<mo>+</mo>
+        <mrow><msub><mi>E</mi><mn>0</mn></msub>
+              <mo>-</mo><msub><mi>F</mi><mn>2</mn></msub>
+        </mrow>
+      </mrow><mrow>
+        <msub><mi>E</mi><mn>0</mn></msub>
+        <mo>+</mo><msub><mi>F</mi><mn>1</mn></msub>
+      </mrow>
+    </mfrac></mrow>
+  </mrow>
+</math>
+<p> Using constant dollars allows us make another simplification,
+	by treating your future selling fee as equivalent to those of
+  the person selling us the property now, we are able to think about the
+  cost of both fees, the buyer's fee
+  (<math><msub><mi>F</mi><mn>1</mn></msub></math>) and
+  seller's fee (<math><msub><mi>F</mi><mn>2</mn></msub></math>) as single
+  overall transaction cost.
+</p>
+<math style="margin-left:10%;">
+  <mfrac>
+    <mrow>
+      <msub><mi>E</mi><mn>0</mn></msub>
+      <mo>-</mo><msub><mi>F</mi><mn>2</mn></msub>
+    </mrow><mrow>
+      <msub><mi>E</mi><mn>0</mn></msub>
+      <mo>+</mo><msub><mi>F</mi><mn>1</mn></msub>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msub><mi>E</mi><mn>0</mn></msub><mo>-</mo>
+      <msub><mi>F</mi><mn>2</mn></msub><mo>+</mo>
+      <msub><mi>F</mi><mn>1</mn></msub><mo>+</mo>
+      <msub><mi>F</mi><mn>2</mn></msub><mo>-</mo>
+      <mrow><mo>(</mo>
+        <msub><mi>F</mi><mn>1</mn></msub><mo>+</mo>
+        <msub><mi>F</mi><mn>2</mn></msub><mo>)</mo>
+      </mrow>
+    </mrow><mrow>
+      <msub><mi>E</mi><mn>0</mn></msub>
+      <mo>+</mo><msub><mi>F</mi><mn>1</mn></msub>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mrow>
+    <mn>1</mn><mo>-</mo>
+    <mfrac>
+      <mrow>
+        <msub><mi>F</mi><mn>1</mn></msub><mo>+</mo>
+        <msub><mi>F</mi><mn>2</mn></msub>
+      </mrow><mrow>
+        <msub><mi>E</mi><mn>0</mn></msub>
+        <mo>+</mo><msub><mi>F</mi><mn>1</mn></msub>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <mrow>
+    <mrow><msup><mi>y</mi><mi>n</mi></msup></mrow>
+    <mo>=</mo><mn>1</mn><mo>+</mo>
+    <mrow><mfrac>
+      <mrow>
+        <msub><mi>&Sigma;'</mi><mi>n</mi></msub>
+        <mo>+</mo>
+        <msub><mi>Q</mi><mi>n</mi></msub>
+				<mo>-</mo>
+        <mo>(</mo><msub><mi>F</mi><mn>1</mn></msub>
+              <mo>+</mo><msub><mi>F</mi><mn>2</mn></msub>
+        <mo>)</mo>
+      </mrow><mrow>
+        <msub><mi>E</mi><mn>0</mn></msub>
+        <mo>+</mo><msub><mi>F</mi><mn>1</mn></msub>
+      </mrow>
+    </mfrac></mrow>
+  </mrow>
+</math>
+<p> To normalize the fractional performance such that it is
+  independent of property value and applies to all loan sizes, we define
+	the effective leverage ratio
+  <math><mi>L</mi><mo>=</mo>
+    <mfrac>
+      <mrow><mi>p</mi><mo>&times;</mo><msub><mi>R</mi><mi>N</mi></msub></mrow>
+      <mrow><mi><msub><mi>E</mi><mn>0</mn></msub>
+        <mo>+</mo><msub><mi>F</mi><mn>1</mn></msub></mrow>
+    </mfrac>
+  </math>
+  as the inital loan size relative to the initial investment
+  (down payment plus buyer's fees).
+</p>
+<math style="margin-left:10%;">
+  <mrow><msup><mi>y</mi><mi>n</mi></msup></mrow>
+  <mo>=</mo><mn>1</mn><mo>+</mo>
+	<mfrac>
+		<mrow><mi>L</mi><mo>(</mo><msub><mi>E</mi><mn>0</mn></msub>
+			<mo>+</mo><msub><mi>F</mi><mn>1</mn></msub><mo>)</mo>
+		</mrow><mrow>
+			<mi>p</mi><mo>&times;</mo><msub><mi>R</mi><mi>N</mi></msub>
+		</mrow>
+	</mfrac><mo>&times;</mo>
+  <mfrac>
+    <mrow>
+      <msub><mi>&Sigma;'</mi><mi>n</mi></msub>
+      <mo>+</mo>
+      <msub><mi>Q</mi><mi>n</mi></msub>
+			<mo>-</mo>
+      <mo>(</mo><msub><mi>F</mi><mn>1</mn></msub>
+            <mo>+</mo><msub><mi>F</mi><mn>2</mn></msub>
+      <mo>)</mo>
+    </mrow><mrow>
+      <msub><mi>E</mi><mn>0</mn></msub>
+      <mo>+</mo><msub><mi>F</mi><mn>1</mn></msub>
+    </mrow>
+  </mfrac>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <mrow><msup><mi>y</mi><mi>n</mi></msup></mrow>
+  <mo>=</mo>
+  <mrow>
+    <mn>1</mn><mo>+</mo>
+    <mfrac><mi>L</mi><msub><mi>R</mi><mi>N</mi></msub></mfrac>
+    <mo>(</mo><mrow>
+			<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+      <mo>+</mo>
+      <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+      <mo>-</mo>
+      <mfrac>
+        <mrow>
+          <msub><mi>F</mi><mn>1</mn></msub>
+          <mo>+</mo><msub><mi>F</mi><mn>2</mn></msub>
+        </mrow>
+        <mi>p</mi>
+      </mfrac>
+    </mrow>
+    <mo>)</mo>
+  </mrow>
+</math>
+<p> Next, the differential performance after <i>n</i> months is the fractional
+	performance minus one
+	(<span style="white-space:nowrap;"><i>Y<sub>n</sub> = y<sup>n</sup> - 1</i></span>).
+</p>
+<math style="margin-left:10%;">
+  <msub><mi>Y</mi><mi>n</mi></msub>
+  <mo>=</mo>
+  <mrow>
+    <mfrac><mi>L</mi><msub><mi>R</mi><mi>N</mi></msub></mfrac>
+    <mo>(</mo><mrow>
+			<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+      <mo>+</mo>
+      <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac>
+      <mo>-</mo><mi>T</mi>
+    </mrow>
+    <mo>)</mo>
+  </mrow>
+	<mspace width="1.5em"/><mtext>where</mtext><mspace width="1em"/>
+	<mi>L</mi><mo>=</mo>
+  <mfrac>
+    <mrow><mi>p</mi><mo>&times;</mo><msub><mi>R</mi><mi>N</mi></msub></mrow>
+    <mrow><mi><msub><mi>E</mi><mn>0</mn></msub>
+      <mo>+</mo><msub><mi>F</mi><mn>1</mn></msub>
+		</mrow>
+  </mfrac>
+	<mspace width="1em"/><mtext>and</mtext><mspace width="1em"/>
+	<mi>T</mi><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<msub><mi>F</mi><mn>1</mn></msub>
+			<mo>+</mo><msub><mi>F</mi><mn>2</mn></msub>
+		</mrow>
+		<mi>p</mi>
+	</mfrac>
+</math>
+<p>	Finally we substitute in the real equity buildup from the loan and
+	exponential opportunity gains from positive cash flow:
+</p>
+<math style="margin-left:10%;">
+  <msub><mi>Y</mi><mi>n</mi></msub>
+  <mo>=</mo>
+  <mfrac><mi>L</mi><msub><mi>R</mi><mi>N</mi></msub></mfrac>
+  <mrow><mo>[</mo>
+		<mfrac>
+			<mrow>
+				<mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+			</mrow>
+			<mi>I</mi>
+		</mfrac>
+		<mo>+</mo>
+		<mfrac>
+			<mrow>
+				<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+			</mrow><mrow>
+				<mi>&pi;</mi><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup>
+			</mrow>
+		</mfrac>
+    <mo>+</mo>
+		<mfrac>
+      <mrow>
+        <msup><mi>&omega;</mi><mi>n</mi></msup>
+        <mo>-</mo><mn>1</mn>
+      </mrow><mrow>
+        <mi>c</mi><mi>&Omega;</mi>
+      </mrow>
+    </mfrac>
+    <mo>-</mo>
+    <mfrac>
+      <mrow>
+        <msup><mi>&gamma;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+      </mrow><mrow>
+      	<mi>&pi;</mi><mi>&Gamma;</mi>
+			</mrow>
+    </mfrac>
+    <mo>-</mo><mi>T</mi>
+  <mo>]</mo></mrow>
+	<mspace width="1.5em"/><mtext>for</mtext><mspace width="0.5em"/>
+	<mi>i</mi><mo>&ne;</mo><mn>1</mn><mo>,</mo><mspace width="0.5em"/>
+	<mi>&pi;</mi><mo>&ne;</mo><mn>1</mn><mo>,</mo><mspace width="0.5em"/>
+	<mi>&omega;</mi><mo>&gt;</mo><mn>1</mn><mo>,</mo><mspace width="0.5em"/>
+	<mi>&gamma;</mi><mo>&gt;</mo><mn>1</mn><mo>.</mo>
+</math>
+<p>	This equation describes the differential performance of a
+	mortgage investment after <i>n</i> months. For example
+	<span style="white-space:nowrap;"><i>Y<sub>n</sub> = 0.4</i></span>
+	would mean a gain of 40% of the initial investment after n months.
+</p>
+<p> We can see how performance is affected by the following factors:
+</p>
+<ol>
+	<li>the leverage ratio (<i>L</i>) due to the down payment percentage,</li>
+	<li>the ratio (<i>R<sub>N</sub></i>) of initial mortgage pricipal compared
+		to the monthly mortgage payment, which is a function of the nominal
+		interest rate (<i>i</i>) and loan period (<i>N</i>),
+	</li>
+	<li>inflation (<i>&pi;</i>) induced mortgage equity buildup due to
+		the reduced burden of the remaining loan pricipal relative to home value,
+	</li>
+	<li>principal payoff in terms of real interest rates
+		(<span style="whie-space:nowrap;"><i>r = i/&pi;</i></span>) reflecting
+		the larger fraction of the monthly payment going toward principal
+		each month.
+	</li>
+	<li>yield of other investments (<i>&omega;</i>) potentially made from postive
+		monthly cash flows, affected strongly by the mortgage preference
+		factor (<i>c</i>),
+	</li>
+	<li>opportunity cost
+		(<span style="white-space:nowrap;"><i>&gamma; = &omega;/&pi;</i></span>)
+		of the monthly mortgage payment, which is less than the yield of other
+		investments over time due to discounting of the monthly mortgage
+		payment due to inflation (<i>&pi;</i>) and
+	</li>
+	<li> a recoupment period (<i>T</i>) of the number of monthly mortgage
+		payments equal to the total transaction costs of buying a home and
+		loan origination.
+	</li>
+</ol>
+</article>
+<nav>
+  <ul>
+    <li><a href="cash-flow-power.html">Prev</a></li>
+    <li><a href="mortgage-period.html">Next</a></li>
+		<li><a href="index.html">Index</a></li>
+		<li><a href="../Privacy-Policy/index.html">Privacy</a></li>
+  </ul>
+  <div style="clear: both; min-width: 100%; margin: 0px; padding: 0px;"></div>
+</nav>
+<footer>
+<br>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	<img alt="Creative Commons License" style="border-width:0"
+	src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
+  Ben Lorenzetti<br>
+  This work is licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
+	Commons Attribution 4.0 International License
+</a>.
+</footer>
+</div><!--article+nav wrapper-->
+<footer>
+</footer>
+</div><!--horizontal centering div-->
+</body>
+</html>

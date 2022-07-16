@@ -10,15 +10,14 @@
 <body>
 <div id="horizontal-div-containing-entire-page">
 <header></header>
-<aside style="background-image: Linear-gradient(to top, #a02040, #404040);
-	min-width: 250px;">
+<aside style="background-image: Linear-gradient(to top, #a02040, #404040);">
 <a href="index.html">
-	<img src="../Brand/20220620-geometric-series-16.png"
+	<img src="../Brand/20220619-pyramid.png"
 	width="250px" alt="snth.us">
 </a>
 </aside>
 <div id="vertical-div-containing-article-and-navigation">
-<hr/>
+<hr>
 <article>
 <h1>Price Floor (<i>c</i> = 1) Model</h1>
 <p> The <a href="index.html">mortgage calculator</a>
@@ -31,13 +30,13 @@
 <p> This constant is like
 	<math><mi>V</mi><mo>=</mo><mi>I</mi><mi>R</mi></math>, where
 	current (<i>I</i>) is akin to monthly mortgage payments and
-	voltage (<i>V</i>) is akin to loan principal.
-	We define a variable <i>p</i> to be the monthly
-	mortgage payment such that
+	voltage (<i>E or V</i>) is akin to loan principal.
+	We define variables <i>p</i> to be the monthly
+	mortgage payment and <i>E<sub>0</sub></i> the initial loan principal
+	such that:
 </p>
 <math style="margin-left: 10%;">
-	<mo>(</mo><mn>1</mn><mo>-</mo><mi>dp</mi><mo>)</mo>
-	<msub><mi>V</mi><mtext>home value</mtext></msub><mo>=</mo>
+	<msub><mi>E</mi><mn>0</mn></msub><mo>=</mo>
 	<mi>p</mi><mo>*</mo><msub><mi>R</mi><mi>N</mi></msub>
 	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
 	<msub><mi>R</mi><mi>N</mi></msub><mo>=</mo>
@@ -63,46 +62,51 @@
 		</mtable>
 	</mrow>
 </math>
-<p> where <i>dp</i> is the down payment percent (in fractional form).
-</p>
 <p> This Ohm's law relationship inspires creation of a
-	circuit model for home prices. The analysis of property prices
+	circuit model for home prices based on monthly cash-flows.
+</p>
+<img src="figures/20220712-price-floor-model.png" width="75%">
+<p> The analysis of property prices
 	begins with estimating the rent the property could fetch and the
 	sum of all operating expenses a landlord would face based on
-	current market prices. Property taxes <i>G<sub>prop</sub></i> (% annually)
-	are broken out separately from the other expenses because they
-	are based on home value.
+	current market prices. These two values are projected to grow
+	proportionally in the future with inflation, so expenses are depicted
+	as a dependent current source (diamond shape) to keep rent values as
+	the main independent source from long term market forces.
 </p>
-<p> After operating and ownership expenses are paid for, what remains
+<p> After operating expenses and property taxes are paid for, what remains
 	is gross income (<i>i<sub>inc</sub></i>) for the landlord.
-	We do not classify mortgage payments as an operating expense,
-	therefore income tax <i>T</i> (% annually) is proportional to gross income
-	(<i>i<sub>inc</sub></i>).
-	What remains we define as net income (<i>i<sub>net</sub></i>).
+	Perhaps controversially, we do not classify mortgage payments as an
+	operating expense, therefore income tax
+	is proportional to gross income (<i>i<sub>inc</sub></i>).
 </p>
-<p> What we have described so far is not a very interesting circuit,
-	it is basically a current node with several independent and
-	dependent current sources and a floating voltage. But
-	if we complete the circuit with <i>R<sub>N</sub></i> such that
-	<math><msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mi>p</mi></math>,
-	the model will determine the home price below which a landlord would
-	have monthly profits in excess of the the mortgage payment,
-	i.e. positive cash flow.
+<p> Finally after income taxes and mortgage payements,
+	what remains would be defined as net income (<i>i<sub>net</sub></i>),
+	which would flow in or out of you, the independent voltage source that
+	sets the purchase price of the property.
 </p>
-<img src="20220709-price-floor-model.png" width="75%">
-<p> In a well functioning market with mortgage lending available,
-	you would not expect to find any usable homes at this price
-	because if home building/maintaining were this inexpensive
-	relative to rents many would be building or buying to get out
-	of renting. Therefore, resulting from completing the circuit with
-	<span style="white-space:nowrap;">
-		<math>
-			<msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mi>p</mi>
-			<mo>(</mo><mn>1</mn><mo>+</mo><msub><mi>T</mi><mtext>inc</mtext></msub><mo>)</mo>
-		</math>,
-	</span>
-	we call this value <i>V<sub>floor</sub></i>, and we call this
-	floor value of the monthly mortgage payment <i>q</i>.
+<hr>
+<h2>Supply and Demand</h2>
+<p> If a property were available on the market for a price such that
+	<math><msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mn>0</mn></math>,
+	i.e. with rents sufficiently high to cover the entire mortgage
+	payment and all other landlord expenses, then tenants would benefit
+	financially from becoming an landlord-tenant because, for the same
+	monthly rent, they could be building up equity in their home and
+	mortgage.
+</p>
+<p> Therefore, in a well functioning market with mortgage lending available,
+	this zero net cash-flow condition should drive home prices up or rents
+	down as renters switch to becoming home owners.
+	We call this obviously below-equilibrium value for home prices
+	<i>V<sub>floor</sub></i>, and we call this
+	floor value of the monthly mortgage payment <i>q</i>
+	(i.e. <math><mi>p</mi><mo>=</mo><mi>q</mi></math>).
+</p>
+<img src="figures/20220712-price-floor-model.png" width="75%">
+<p> Solving the circuit model for
+	<math><msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mn>0</mn></math>
+	results in:
 </p>
 <math style="margin-left:10%;">
 	<msub><mi>V</mi><mtext>floor</mtext></msub><mo>=</mo>
@@ -113,8 +117,14 @@
 			<mo>-</mo>
 			<msub><mi>i</mi><mtext>expenses</mtext></msub>
 		</mrow><mrow>
-			<msub><mi>G</mi><mtext>poli</mtext></msub><mo>+</mo>
-			<msub><mi>G</mi><mtext>prop</mtext></msub>
+			<mo>(</mo>
+				<mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac>
+			<mo>)</mo>
+			<mo>+</mo>
+			<mo>(</mo><mfrac>
+				<msub><mi>G</mi><mtext>poli</mtext></msub>
+				<mrow><mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>inc</mtext></msub></mrow>
+			</mfrac><mo>)</mo>
 		</mrow>
 	</mfrac>
 	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
@@ -123,78 +133,64 @@
 		<mrow><mn>1</mn><mo>-</mo><mi>dp</mi></mrow>
 		<mrow>
 			<msub><mi>R</mi><mi>N</mi></msub>
-				<mrow><mo>(</mo>
-					<mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>inc</mtext></msub>
-				<mo>)</mo></mrow>
 		</mrow>
 	</mfrac>
 </math>
 <p> and </p>
 <math style="margin-left:10%;">
 	<mi>q</mi><mo>=</mo>
-	<mrow><mo>(</mo>
-		<mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>inc</mtext></msub>
-	<mo>)</mo></mrow>
+	<mi>p</mi><mo>(</mo><msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mn>0</mn><mo>)</mo>
+	<mo>=</mo>
 	<mrow><mo>(</mo>
 		<mo>(</mo>
 			<mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>vac</mtext></msub>
 		<mo>)</mo>
 		<msub><mi>I</mi><mtext>rent</mtext></msub><mo>-</mo><msub><mi>i</mi><mtext>expenses</mtext></msub>
 	<mo>)</mo></mrow>
-	<mrow><mo>(</mo>
-		<mn>1</mn><mo>-</mo>
-		<mfrac>
-			<msub><mi>G</mi><mtext>prop</mtext></msub>
-			<mrow>
-				<msub><mi>G</mi><mtext>policy</mtext></msub><mo>+</mo>
-				<msub><mi>G</mi><mtext>prop</mtext></msub>
-			</mrow>
-		</mfrac>
-	<mo>)</mo></mrow>
+	<mfrac>
+		<msub><mi>G</mi><mtext>poli</mtext></msub>
+		<mrow>
+			<mo>(</mo>
+				<mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac>
+			<mo>)</mo>
+			<mo>+</mo>
+			<mo>(</mo><mfrac>
+				<msub><mi>G</mi><mtext>poli</mtext></msub>
+				<mrow><mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>inc</mtext></msub></mrow>
+			</mfrac><mo>)</mo>
+		</mrow>
+	</mfrac>
 </math>
+<hr>
+<h2>Mortgage Preference Factor (<i>c</i>)</h2>
 <p> When a home buyer and seller agree to a sales prices
-	different from the buyer's <i>V<sub>floor</sub></i>,
-	the buyer becomes a new independent voltage (cash) source that
-	makes up for non-zero monthly cash flows. We define a ratio (<i>c</i>)
-	in terms the agreed upon market price relative to <i>V<sub>floor</sub></i>.
+	above the buyer's <i>V<sub>floor</sub></i>,
+	this is modelled by the buyer becoming a new independent voltage source
+	that makes up for the negative monthly cash-flows. We define a
+	mortgage preference factor (<i>c</i>)
+	in terms the agreed upon market price relative to <i>V<sub>floor</sub></i>,
+	which because of Ohm's law can also be written in terms of monthly
+	mortgage payments.
 </p>
 <math style="margin-left: 20%">
 	<mi>c</mi><mo>=</mo>
 	<mfrac>
-		<msub><mi>V</mi><mtext>market</mtext></msub>
-		<msub><mi>V</mi><mtext>floor</mtext></msub>
-	</mfrac><mo>=</mo>
-	<mfrac><mi>p</mi><mi>q</mi></mfrac>
+		<msub><mi>V</mi><mtext>market sales price</mtext></msub>
+		<msub><mi>V</mi><mtext>floor home value</mtext></msub>
+	</mfrac>
 </math>
-<hr>
-<p> If the E/P of the mortgage principal is constant, what other
-	landlord expenses are proportional to rental propery value?
-	Property taxes, income taxes, and to some extent utilities,
-	insurance, etc. Thus these expenses can be
-	<a href="expense-normalization.html">normalized into
-	constant price to expense (P/E') ratios</a> with an accurate
-	appraisal of property value and expenses.
+<p> The portion of the property value bought with credit (<i>E</i>)
+<p> The mortgage preference factor <i>c</i>, <i>V<sub>floor</sub></i>,
+	and the mortgage months ratio <i>R<sub>N</sub></i> are the key values
+	the following articles will use to calculate an overall investment return
+	of mortgaged properties.
 </p>
-<p> The constant P/E of the mortgage and P/E's of other
-	expenses can be represented schematically by resistors in parallel
-	with an independent source, which is either the purchase
-	price (like Voltage) or monthly rent income (like Current),
-	such that
-	<span style="white-space:nowrap">Property Value = (R1||R2||R3...) &times; Monthly Rent</span>
+<p>
+	If this website earns enough money I hope to do a study
+	of operating expenses and mortgage preference factors over time and in
+	multiple regional markets.
 </p>
 
-<h2>The Next Step</h2>
-<p> In the model the estimated value forms a lower limit on the fair price
-	of a property. Take the net monthly income to the
-	(1) <a href="mortgage-calculator.html">mortgage calculator</a>
-	to compare the asking price to other investments.
-</p>
-<p>	This is the second article (2) of a series
-	<a href="index.html">Should I Buy or Rent?</a>
-	Monthly "R" constants used in this model are calculated from (3)
-	<a href="normal-expenses.html">normal expenses</a>
-	for a property or local area.
-</p>
 <footer>
 <hr>
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
@@ -209,9 +205,10 @@
 </article>
 <nav>
   <ul>
-    <li><a href="index.html">Back</a></li>
-    <li><a href="../Archive/index.html">Archive</a></li>
-		<li><a href="../Privacy-Policy/index.html">Privacy</a></li>
+    <li><a href="mortgage-months-ratio.html">Prev</a></li>
+    <li><a href="#">Next</a></li>
+    <li><a href="index.html">Index</a></li>
+		<li><a href="../Privacy-Policy/index.html">Privacy Policy</a></li>
   </ul>
   <div style="clear: both; min-width: 100%; margin: 0px; padding: 0px;"></div>
 </nav>

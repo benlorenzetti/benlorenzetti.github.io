@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Cash Flow Power</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/ben.css">
+	<script data-ad-client="ca-pub-2647559998401134" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+<div id="horizontal-div-containing-entire-page">
+<header>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2647559998401134"
+	     crossorigin="anonymous"></script>
+	<!-- header-ad -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-2647559998401134"
+	     data-ad-slot="2556218560"
+	     data-ad-format="auto"
+	     data-full-width-responsive="true"></ins>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</header>
+<aside style="background-image: Linear-gradient(to top, #a02040, #404040);">
+	<a href="index.html">
+		<img width="252px;" alt="Snth Logo" src="../Brand/20220619-pyramid.png">
+	</a>
+</aside>
+<div id="vertical-div-containing-article-and-navigation">
+<hr>
+<article>
+<h1>Cash Flow Power</h1>
+<p> To fairly compare the value of
+  <a href="equity-buildup.html">real equity buildup</a> from the
+	mortgage (<i>&Sigma;<sub>n</sub></i>) with monthly cash flows,
+  we need to sum cash flows with weighting factors for the
+  opportunity cost (<math>&omega;</math>) of other investments.
+</p>
+<p> From the <a href="price-floor-circuit.html">price floor model</a>, the
+	gross monthly income of a property minus taxes (<i>q</i>) is expected to
+	grow with inflation (<i>&pi;</i>),
+	while the monthly mortgage payment (<i>p</i>) remains fixed.
+	We choose to adjust for this by discounting the real value of the mortgage
+	payment by the inflation factor.
+</p>
+<p>	The difference each month between the gross income less taxes and
+  the mortgage payment could be invested elsewhere (one month later)
+  for a some average monthly return (<i>&Omega;</i>) with monthly return factor
+	<math><mi>&omega;</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>&Omega;</mi></math>.
+	We define <i>Q<sub>n</sub></i> as the inflation adjusted sum of all these
+	gains over months 1 to <i>n</i> of a mortgage.
+</p>
+<math style="margin-left:10%;">
+  <mrow>
+    <msub><mi>Q</mi><mi>n</mi></msub><mo>=</mo>
+    <munderover><mo>&sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow>
+      <mi>n</mi></munderover>
+    <mrow>
+      <mrow><mo>(</mo>
+				<mi>q</mi>
+        <mo>-</mo><mi>p</mi>
+				<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>m</mi></mrow></msup>
+      <mo>)</mo></mrow>
+      <msup><mi>&omega;</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup>
+    </mrow>
+</math>
+<p> Rebasing the index with
+  <math><mi>k</mi><mo>=</mo><mi>m</mi><mo>-</mo><mn>1</mn></math>,
+  defining
+	<math><mi>&gamma;</mi><mo>=</mo><mi>&omega;</mi><mo>/</mo><mi>&pi;</mi></math>
+	and	substituting the closed form solution for the
+  geometric series produces the exponential gains one expects from any
+  dividend-like investment.
+</p>
+<math style="margin-left:10%;">
+  <msub><mi>Q</mi><mi>n</mi></msub><mo>=</mo>
+  <munderover>
+    <mo>&sum;</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow>
+    <mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>
+  </munderover>
+  <mrow>
+    <mrow><mo>(</mo>
+			<mi>q</mi><mo>-</mo>
+			<mfrac><mi>p</mi><mi>&pi;</mi></mfrac>
+			<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>k</mi></mrow></msup>
+    <mo>)</mo></mrow>
+    <msup><mi>&omega;</mi><mi>k</mi></msup>
+  </mrow>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <msub><mi>Q</mi><mi>n</mi></msub><mo>=</mo>
+  <munderover>
+    <mo>&sum;</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow>
+    <mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>
+  </munderover>
+  <mrow>
+		<mi>q</mi>
+    <msup><mi>&omega;</mi><mi>k</mi></msup><mo>-</mo>
+    <mfrac><mi>p</mi><mi>&pi;</mi></mfrac>
+		<msup><mi>&gamma;</mi><mi>k</mi></msup>
+  </mrow>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <msub><mi>Q</mi><mi>n</mi></msub><mo>=</mo>
+  <mrow>
+		<mi>q</mi>
+    <mfrac>
+      <mrow>
+        <msup><mi>&omega;</mi><mi>n</mi></msup>
+        <mo>-</mo><mn>1</mn>
+      </mrow><mrow>
+        <mi>&omega;</mi><mo>-</mo><mn>1</mn>
+      </mrow>
+    </mfrac>
+    <mo>-</mo>
+		<mfrac><mi>p</mi><mi>&pi;</mi></mfrac>
+    <mfrac>
+      <mrow>
+        <msup><mi>&gamma;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+      </mrow><mrow>
+        <mi>&gamma;</mi><mo>-</mo><mn>1</mn>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math>
+<p> To simplify the presentation we substitute
+  <math><mi>&Omega;</mi><mo>=</mo><mi>&omega;</mi><mo>-</mo><mn>1</mn></math>
+	and
+  <math><mi>&Gamma;</mi><mo>=</mo><mi>&gamma;</mi><mo>-</mo><mn>1</mn></math>
+  and make the equation mortgage-size agnostic by dividing through by the
+  monthly mortgage payment (<i>p</i>). This extracts the mortgage preference
+  factor (<i>c</i>), which was defined in the
+  <a href="price-floor-circuit.html">price floor model</a>
+  (<math><mi>c</mi><mo>=</mo><mi>q</mi><mo>/</mo><mi>p</mi></math>).
+</p>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
+  <mrow>
+    <mfrac>
+      <mrow>
+        <msup><mi>&omega;</mi><mi>n</mi></msup>
+        <mo>-</mo><mn>1</mn>
+      </mrow><mrow>
+        <mi>c</mi><mi>&Omega;</mi>
+      </mrow>
+    </mfrac>
+    <mo>-</mo>
+    <mfrac>
+      <mrow>
+        <msup><mi>&gamma;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+      </mrow><mrow>
+      	<mi>&pi;</mi><mi>&Gamma;</mi>
+			</mrow>
+    </mfrac>
+  </mrow>
+  <mspace width="1.5em"/><mtext>where</mtext><mspace width="1.5em"/>
+	<mtable>
+		<mtr>
+			<mtd>
+				<mi>&Omega;</mi><mo>=</mo><mi>&omega;</mi><mo>-</mo><mn>1</mn>
+      </mtd>
+		</mtr><mtr>
+			<mtd>
+				<mi>&gamma;</mi><mo>=</mo><mi>&omega;</mi><mo>/</mo><mi>&pi;</mi>
+			</mtd>
+			<mtd><mspace width="1em"/><mtext>and</mtext><mspace width="1em"/></mtd>
+			<mtd>
+				<mi>c</mi><mo>=</mo><mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+				<mfrac><msub><mi>V</mi><mtext>sales price</mtext></msub>
+					<msub><mi>V</mi><mtext>price floor</mtext></msub>
+				</mfrac>
+			</mtd>
+		</mtr><mtr>
+			<mtd>
+				<mi>&Gamma;</mi><mo>=</mo><mi>&gamma;</mi><mo>-</mo><mn>1</mn>
+			</mtd>
+		</mtr>
+	</mtable>
+</math>
+
+</article>
+<nav>
+  <ul>
+    <li><a href="equity-buildup.html">Prev</a></li>
+    <li><a href="mortgage-period.html">Next</a></li>
+		<li><a href="../Economics/index.html">Index</a></li>
+		<li><a href="../Privacy-Policy/index.html">Privacy</a></li>
+  </ul>
+  <div style="clear: both; min-width: 100%; margin: 0px; padding: 0px;"></div>
+</nav>
+<footer>
+<br>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	<img alt="Creative Commons License" style="border-width:0"
+	src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
+  Ben Lorenzetti<br>
+  This work is licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
+	Commons Attribution 4.0 International License
+</a>.
+</footer>
+</div><!--article+nav wrapper-->
+<footer>
+</footer>
+</div><!--horizontal centering div-->
+</body>
+</html>
