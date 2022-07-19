@@ -130,34 +130,30 @@
 <p> To simplify the presentation we substitute
   <math><mi>&Omega;</mi><mo>=</mo><mi>&omega;</mi><mo>-</mo><mn>1</mn></math>
 	and
-  <math><mi>&Gamma;</mi><mo>=</mo><mi>&gamma;</mi><mo>-</mo><mn>1</mn></math>
-  and make the equation mortgage-size agnostic by dividing through by the
-  monthly mortgage payment (<i>p</i>). This extracts the mortgage preference
-  factor (<i>c</i>), which was defined in the
-  <a href="price-floor-circuit.html">price floor model</a>
-  (<math><mi>c</mi><mo>=</mo><mi>q</mi><mo>/</mo><mi>p</mi></math>).
+  <math><mi>&Gamma;</mi><mo>=</mo><mi>&gamma;</mi><mo>-</mo><mn>1</mn></math>.
+	To make the equation mortgage-size agnostic by dividing through by the
+  monthly mortgage payment (<i>p</i>). For the same reason we then replace
+	the ratio of mortgage-free net cash-flow to monthly mortgage payment
+	(<i>q/p</i>) with the personal credit factor to mortgage preference
+	factor ratio (<i>f/C</i>), which were defined in the
+  <a href="price-floor-circuit.html">price floor model</a>.
 </p>
 <math style="margin-left:10%;">
   <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
   <mrow>
-    <mfrac>
-      <mrow>
-        <msup><mi>&omega;</mi><mi>n</mi></msup>
-        <mo>-</mo><mn>1</mn>
-      </mrow><mrow>
-        <mi>c</mi><mi>&Omega;</mi>
-      </mrow>
-    </mfrac>
+		<mfrac><mi>f</mi><mi>C</mi></mfrac>
+    <mo>(</mo><mfrac>
+      <mrow><msup><mi>&omega;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
+      <mi>&Omega;</mi>
+    </mfrac><mo>)</mo>
     <mo>-</mo>
-    <mfrac>
-      <mrow>
-        <msup><mi>&gamma;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
-      </mrow><mrow>
-      	<mi>&pi;</mi><mi>&Gamma;</mi>
-			</mrow>
-    </mfrac>
+		<mfrac><mn>1</mn><mi>&pi;</mi></mfrac>
+    <mo>(</mo><mfrac>
+      <mrow><msup><mi>&gamma;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
+			<mi>&Gamma;</mi>
+    </mfrac><mo>)</mo>
   </mrow>
-  <mspace width="1.5em"/><mtext>where</mtext><mspace width="1.5em"/>
+  <mspace width="2em"/><mtext>where</mtext><mspace width="2em"/>
 	<mtable>
 		<mtr>
 			<mtd>
@@ -166,13 +162,6 @@
 		</mtr><mtr>
 			<mtd>
 				<mi>&gamma;</mi><mo>=</mo><mi>&omega;</mi><mo>/</mo><mi>&pi;</mi>
-			</mtd>
-			<mtd><mspace width="1em"/><mtext>and</mtext><mspace width="1em"/></mtd>
-			<mtd>
-				<mi>c</mi><mo>=</mo><mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
-				<mfrac><msub><mi>V</mi><mtext>sales price</mtext></msub>
-					<msub><mi>V</mi><mtext>price floor</mtext></msub>
-				</mfrac>
 			</mtd>
 		</mtr><mtr>
 			<mtd>
@@ -186,8 +175,8 @@
 <nav>
   <ul>
     <li><a href="equity-buildup.html">Prev</a></li>
-    <li><a href="mortgage-period.html">Next</a></li>
-		<li><a href="../Economics/index.html">Index</a></li>
+    <li><a href="yield-leverage-and-performance.html">Next</a></li>
+		<li><a href="index.html">Index</a></li>
 		<li><a href="../Privacy-Policy/index.html">Privacy</a></li>
   </ul>
   <div style="clear: both; min-width: 100%; margin: 0px; padding: 0px;"></div>

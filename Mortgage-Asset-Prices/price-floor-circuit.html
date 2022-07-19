@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Price Floor Model</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/ben.css">
+	<script data-ad-client="ca-pub-2647559998401134" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+<div id="horizontal-div-containing-entire-page">
+<header></header>
+<aside style="background-image: Linear-gradient(to top, #a02040, #404040);">
+<a href="index.html">
+	<img src="../Brand/20220619-pyramid.png"
+	width="250px" alt="snth.us">
+</a>
+</aside>
+<div id="vertical-div-containing-article-and-navigation">
+<hr>
+<article>
+<h1>Price Floor (<i>C</i> = 1) Model</h1>
+<p> The <a href="index.html">mortgage calculator</a>
+	demonstrated an important result: there is a constant, denoted
+	<i>R<sub>N</sub></i>, which relates monthly mortgage payments to
+	inital loan principal and depends only on a geometric series of
+	the interest rate (<i>i</i>) and loan term (<i>N</i>) &mdash; most
+	importantly <i>R<sub>N</sub></i> is a constant, independent of loan size.
+</p>
+<p> This constant is like
+	<math><mi>V</mi><mo>=</mo><mi>I</mi><mi>R</mi></math>, where
+	current (<i>I</i>) is akin to monthly mortgage payments and
+	voltage (<i>E or V</i>) is akin to loan principal.
+	We define variables <i>p</i> to be the monthly
+	mortgage payment and <i>E<sub>0</sub></i> the initial loan principal
+	such that:
+</p>
+<math style="margin-left: 10%;">
+	<msub><mi>P</mi><mn>0</mn></msub><mo>=</mo>
+	<mi>p</mi><mo>*</mo><msub><mi>R</mi><mi>N</mi></msub>
+	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
+	<msub><mi>R</mi><mi>N</mi></msub><mo>=</mo>
+	<mrow><mo>{</mo>
+		<mtable>
+			<mtr>
+				<mtd>
+					<mfrac>
+						<mrow><mn>1</mn><mo>-</mo><msup><mi>i</mi>
+							<mrow><mo>-</mo><mi>N</mi><mo>/</mo><mtext>months</mtext></mrow></msup>
+						</mrow>
+						<mrow><mn>1</mn><mo>-</mo><msup><mi>i</mi>
+							<mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow>
+					</mfrac><mtext>months</mtext>
+					<mtext>,
+				</mtd><mtd>
+					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
+				</mtd>
+			</mtr><mtr>
+				<mtd><mi>N</mi><mtext>,</mtext></mtext><mspace width="1em"/></mtd>
+				<mtd><mi>i</mi><mo>=</mo><mn>1</mn></mtd>
+			</mtr>
+		</mtable>
+	</mrow>
+</math>
+<p> This Ohm's law relationship inspires creation of a
+	circuit model for home prices based on monthly cash-flows.
+</p>
+<img src="figures/20220712-price-floor-model.png" width="75%">
+<h2>Mortgage Conductance</h2>
+<p> The overall sales price (<i>V<sub>mkt</sub></i>) is divided into
+	two parts, the initial mortgage principal (<i>P<sub>0</sub></i>)
+	plus the down payment (<i>e<sub>0</sub></i>), for example a 20% down
+	payment would be <i style="white-space:nowrap;">d = 0.2</i>. The
+	equivalent conductance of these two in-series components is just a
+	scaled reflection of the mortgage constant itself:
+</p>
+<math style="margin-left:10%;">
+	<msub><mi>P</mi><mn>0</mn></msub>
+	<mo>=</mo><msub><mi>V</mi><mtext>mkt</mtext></msub>
+	<mo>(</mo><mn>1</mn><mo>-</mo><mi>d</mi><mo>)</mo>
+	<mo>=</mo><mi>p</mi><msub><mi>R</mi><mi>N</mi></msub>
+	<mspace width="2em"/><mo>&therefore;</mo><mspace width="1em"/>
+	<mfrac><mi>p</mi><msub><mi>V</mi><mtext>mkt</mtext></msub></mfrac>
+	<mo>=</mo>
+	<mfrac>
+		<mrow><mn>1</mn><mo>-</mo><mi>d</mi></mrow>
+		<msub><mi>R</mi><mi>N</mi></msub>
+	</mfrac>
+</math>
+<p> We call the conductance (<i>G<sub>M</sub></i>) that results the
+	mortgage conductance.
+</p>
+<math style="margin-left:10%;">
+	<msub><mi>G</mi><mi>M</mi></msub>
+	<mo>=</mo>
+	<mfrac>
+		<mrow><mn>1</mn><mo>-</mo><mi>d</mi></mrow>
+		<msub><mi>R</mi><mi>N</mi></msub>
+	</mfrac>
+</math>
+<h2>Nonequilibrium Supply and Demand</h2>
+<p> If a market prices were such that
+	<math><msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mn>0</mn></math>,
+	i.e. if rents were sufficiently high to cover the entire mortgage
+	payment and all other expenses, then tenants would benefit
+	financially from becoming owners because, for the same
+	monthly rent, they could be building up equity in their home and
+	mortgage.
+</p>
+<img src="figures/20220712-price-floor-model.png" width="75%">
+<p> Therefore, in a well functioning market with credit available,
+	this zero net cash-flow condition should drive rents
+	down or home prices up as renters switch to becoming home owners.
+	We call this obviously below-equilibrium value for a home's market price
+	<i>V<sub>floor</sub></i>
+	Solving the circuit model for
+	<math><msub><mi>i</mi><mtext>net</mtext></msub><mo>=</mo><mn>0</mn></math>
+	results in:
+</p>
+<math style="margin-left:10%;">
+	<msub><mi>V</mi><mtext>floor</mtext></msub><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<mo>(</mo>
+				<mo>(</mo><mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>vac</mtext></msub><mo>)</mo>
+				<msub><mi>I</mi><mtext>rent</mtext></msub>
+				<mo>-</mo>
+				<msub><mi>i</mi><mtext>expenses</mtext></msub>
+			<mo>)</mo><mo>(</mo>
+				<mn>1</mn><mo>-</mo><msub><mi>T</mi><mtext>inc</mtext></msub>
+			<mo>)</mo>
+		</mrow>
+		<mrow>
+			<msub><mi>G</mi><mi>M</mi></msub><mo>+</mo>
+			<msub><mi>G</mi><mtext>prop</mtext></msub><mo>/</mo><mn>12</mn>
+		</mrow>
+	</mfrac>
+</math>
+<p> Although this reference value depends on personal factors, such as
+	credit score (which affects <i>G<sub>M</sub></i>) and income tax rate
+	(<i>T<sub>inc</sub></i>), most of the inputs are property specific or
+	local in nature. Snth.us provides a
+	<a href="operating-expenses.html"   style="text-decoration: none; white-space:nowrap;">
+		<i>V<sub>floor</sub>*</i> calculator
+	</a>
+	and a series of how-to's for estimating this reference point for an average
+	homebuyer. Asterisks indicate an appropriately weighted average value.
+</p>
+<math style="margin-left:10%;">
+	<msubsup><mi>V</mi><mtext>floor</mtext><mo>*</mo></msubsup><mo>=</mo>
+	<mfrac>
+		<msubsup><mi>i</mi><mtext>inc</mtext><mo>*</mo></msubsup>
+		<mrow>
+			<msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup><mo>+</mo>
+			<msub><mi>G</mi><mtext>prop</mtext></msub><mo>/</mo><mn>12</mn>
+		</mrow>
+	</mfrac>
+	<mspace width="2em"/><mtext>where</mtext><mspace width="2em"/>
+	<msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup>
+	<mo>=</mo>
+	<mfrac>
+		<mrow><mn>1</mn><mo>-</mo><mi>d*</mi></mrow>
+		<msubsup><mi>R</mi><mi>N</mi><mo>*</mo></msubsup>
+	</mfrac>
+</math>
+<h2>Morgage Preference and Personal Credit Factors</h2>
+<p> When a buyer and seller agree to a sales prices above
+	<i>V<sub>floor</sub></i>,
+	this is modelled by the buyer becoming a new independent voltage source
+	that makes up for negative monthly cash-flows.
+</p>
+<img src="figures/20220712-price-floor-model.png" width="75%">
+<p> To evaluate the effect of this independent voltage source, we compare
+	this new monthly mortgage payment (<i>p</i>) to the
+	mortgage-free net income after taxes (<i>q</i>).
+</p>
+<math style="margin-left:10%;">
+	<mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<msub><mi>V</mi><mtext>mkt</mtext></msub><msub><mi>G</mi><mi>M</mi></msub>
+		</mrow><mrow>
+			<msubsup><mi>i</mi><mtext>inc</mtext><mo>*</mo></msubsup><mo>-</mo>
+			<msub><mi>V</mi><mtext>mkt</mtext></msub>
+			<mo>(</mo><mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac><mo>)</mo>
+		</mrow>
+	</mfrac>
+</math>
+<p> We define the
+mortgage preference factor (<i>c</i>)
+in terms the agreed upon market price relative to <i>V<sub>floor</sub>*</i>
+of the average homebuyer,
+	<math>
+		<mi>c</mi><mo>=</mo>
+		<mfrac>
+			<msub><mi>V</mi><mtext>market</mtext></msub>
+			<msubsup><mi>V</mi><mtext>floor</mtext><mo>*</mo></msubsup>
+		</mfrac>
+	</math>. Dividing through by <i>V<sub>floor</sub>*</i> introduces <i>c</i>
+	into the cash-flow ratio equation:
+</p>
+<math style="margin-left:10%;">
+	<mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<mi>c</mi><msub><mi>G</mi><mi>M</mi></msub>
+		</mrow><mrow>
+			<mo>(</mo><mfrac>
+				<msubsup><mi>i</mi><mtext>inc</mtext><mo>*</mo></msubsup>
+				<msubsup><mi>V</mi><mtext>floor</mtext><mo>*</mo></msubsup>
+			</mfrac><mo>)</mo>
+			<mo>-</mo><mi>c</mi>
+			<mo>(</mo><mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac><mo>)</mo>
+		</mrow>
+	</mfrac>
+</math>
+<br>
+<math style="margin-left:10%;">
+	<mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<mi>c</mi><msub><mi>G</mi><mi>M</mi></msub>
+		</mrow><mrow>
+			<msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup><mo>+</mo>
+			<mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac>
+			<mo>-</mo><mi>c</mi>
+			<mo>(</mo><mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac><mo>)</mo>
+		</mrow>
+	</mfrac>
+</math>
+<br>
+<math style="margin-left:10%;">
+	<mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<mi>c</mi><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
+		</mrow><mrow>
+			<mn>1</mn><mo>-</mo>
+			<mo>(</mo><mi>c</mi><mo>-</mo><mn>1</mn><mo>)</mo>
+			<mfrac>
+				<msub><mi>G</mi><mtext>prop</mtext></msub>
+				<mrow><mn>12</mn><msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup></mrow>
+			</mfrac>
+		</mrow>
+	</mfrac>
+	<mspace width="2em"/><mtext>where</mtext><mspace width="2em"/>
+	<mi>f</mi><mo>=</mo>
+	<mfrac>
+		<msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup>
+		<msub><mi>G</mi><mi>M</mi></msub>
+	</mfrac>
+</math>
+<p> Finally we extract an approximately 1-to-1 transfer relationship for
+	mortgage preference factors (<i>C</i> vs. <i>c</i>) due to the
+	relationship between local property taxes and national monetary policy.
+</p>
+<math style="margin-left:10%">
+	<mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+	<mfrac><mi>C</mi><mi>f</mi></mfrac>
+	<mspace width="2em"/><mtext>where</mtext><mspace width="2em"/>
+	<mi>C</mi><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<mi>c</mi>
+		</mrow><mrow>
+			<mn>1</mn><mo>-</mo>
+			<mfrac>
+				<msub><mi>G</mi><mtext>prop</mtext></msub>
+				<mrow><mn>12</mn><msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup></mrow>
+			</mfrac>
+			<mo>(</mo><mi>c</mi><mo>-</mo><mn>1</mn><mo>)</mo>
+		</mrow>
+	</mfrac>
+	<mtext>,</mtext><mspace width="1.5em"/>
+	<mi>c</mi><mo>=</mo>
+	<mfrac>
+		<msub><mi>V</mi><mtext>market</mtext></msub>
+		<msubsup><mi>V</mi><mtext>floor</mtext><mo>*</mo></msubsup>
+	</mfrac>
+	<mspace width="1.5em"/><mtext>and</mtext><mspace width="1.5em"/>
+	<mi>f</mi><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<msub><mi>R</mi><mi>N</mi></msub>
+			<msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup>
+		</mrow><mrow>
+			<mn>1</mn><mo>-</mo><mi>d</mi>
+		</mrow>
+	</mfrac>
+</math>
+<p> We call the factor <i>f</i> the personal credit factor
+	because <i>R<sub>N</sub></i> will rise and fall with your personal credit
+	score and loan programs and choices will affect both your
+	mortgage months ratio (<i>R<sub>N</sub></i>) and down payment fraction
+	(<i>d</i>).
+</p>
+<p>
+	Ultimately the capital market mortgage preference factor (<i>C</i>) and
+	the personal credit factor (<i>f</i>) are useful because they
+	make prices relative&mdash;and thus independent of mortgage sizes, which
+  vary over time due to government policy and inflation and between
+	properties of different size.
+</p>
+<footer>
+<hr>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	<img alt="Creative Commons License" style="border-width:0"
+		src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
+	Ben Lorenzetti<br>
+	This work is licensed under a
+	<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
+		Commons Attribution 4.0 International License
+	</a>.
+</footer>
+</article>
+<nav>
+  <ul>
+    <li><a href="mortgage-months-ratio.html">Prev</a></li>
+    <li><a href="#">Next</a></li>
+    <li><a href="index.html">Index</a></li>
+		<li><a href="../Privacy-Policy/index.html">Privacy Policy</a></li>
+  </ul>
+  <div style="clear: both; min-width: 100%; margin: 0px; padding: 0px;"></div>
+</nav>
+</div><!--article+nav wrapper-->
+<footer>
+</footer>
+</div><!--horizontal centering div-->
+</body>
+</html>

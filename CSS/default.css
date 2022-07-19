@@ -1,5 +1,5 @@
 /* General Style */
-body p {
+body {
   font-family: georgia, sans-serif;
   font-color: black;
   font-size: 12pt;
@@ -22,7 +22,11 @@ a {
   color: #2a5db0;
   text-decoration: none;
 }
-
+li {
+  padding: 0.2em;
+  margin-left:2em;
+  font-size: 12pt;
+}
 
 /* Two + One Column Format */
 body {
