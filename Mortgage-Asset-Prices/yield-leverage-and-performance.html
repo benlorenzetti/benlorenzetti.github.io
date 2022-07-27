@@ -42,6 +42,45 @@
 	which was adjusted for inflation to be in terms of dollars at the
 	beginning of the loan period.
 </p>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
+  <mrow>
+		<mfrac><mi>f</mi><mi>C</mi></mfrac>
+    <mo>(</mo><mfrac>
+      <mrow><msup><mi>&omega;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
+      <mi>&Omega;</mi>
+    </mfrac><mo>)</mo>
+    <mo>-</mo>
+    <mo>(</mo><mfrac>
+      <mrow><msup><mi>&gamma;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
+			<mi>&Gamma;</mi>
+    </mfrac><mo>)</mo>
+  </mrow>
+  <mspace width="2em"/><mtext>where</mtext><mspace width="2em"/>
+	<mtable>
+		<mtr>
+			<mtd>
+				<mi>&Omega;</mi><mo>=</mo><mi>&omega;</mi><mo>-</mo><mn>1</mn>
+      </mtd>
+		</mtr><mtr>
+			<mtd>
+				<mi>&gamma;</mi><mo>=</mo><mi>&omega;</mi><mo>/</mo><mi>&pi;</mi>
+			</mtd>
+		</mtr><mtr>
+			<mtd>
+				<mi>&Gamma;</mi><mo>=</mo><mi>&gamma;</mi><mo>-</mo><mn>1</mn>
+			</mtd>
+		</mtr>
+	</mtable>
+</math>
+
+<p> The fifth article found a function for the
+	<a href="cash-flow-power.html">buildup of real wealth from monthly
+	net cash flow</a> (<i>Q<sub>n</sub></i>) after the <i>n<sup>th</sup></i>
+	month, including
+	the opportunity cost of a monthly mortgage payment vs. owning the property
+	mortgage-free.
+</p>
 <math style="margin-left: 10%;">
 	<mfrac><msub><mi>&Sigma;'</mi><mi><mi>n</mi></msub><mi>p</mi></mfrac>
 	<mo>=</mo>
@@ -54,10 +93,7 @@
 						<mrow><mo>(</mo>
 							<mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
 							<mo>+</mo>
-							<mfrac>
-								<mn>1</mn>
-								<mrow><mi>&pi;</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
-							</mfrac>
+							<msup><mi>i</mi><mrow><mn>1</mn><mo>-</mo><mi>N</mi></mrow></msup>
 							<mrow><mo>(</mo>
 								<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
 							<mo>)</mo></mrow>
@@ -82,45 +118,6 @@
 			<mtd><mi>r</mi><mo>=</mo><mi>i</mi><mo>/</mo><mi>&pi;</mi></mtd>
 		</mtr><mtr>
 			<mtd><mi>I</mi><mo>=</mo><mi>i</mi><mo>-</mo><mn>1</mn></mtd>
-		</mtr>
-	</mtable>
-</math>
-<p> The fifth article found a function for the
-	<a href="cash-flow-power.html">buildup of real wealth from monthly
-	net cash flow</a> (<i>Q<sub>n</sub></i>) after the <i>n<sup>th</sup></i>
-	month, including
-	the opportunity cost of a monthly mortgage payment vs. owning the property
-	mortgage-free.
-</p>
-<math style="margin-left:10%;">
-  <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
-  <mrow>
-		<mfrac><mi>f</mi><mi>C</mi></mfrac>
-    <mo>(</mo><mfrac>
-      <mrow><msup><mi>&omega;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
-      <mi>&Omega;</mi>
-    </mfrac><mo>)</mo>
-    <mo>-</mo>
-		<mfrac><mn>1</mn><mi>&pi;</mi></mfrac>
-    <mo>(</mo><mfrac>
-      <mrow><msup><mi>&gamma;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
-			<mi>&Gamma;</mi>
-    </mfrac><mo>)</mo>
-  </mrow>
-  <mspace width="2em"/><mtext>where</mtext><mspace width="2em"/>
-	<mtable>
-		<mtr>
-			<mtd>
-				<mi>&Omega;</mi><mo>=</mo><mi>&omega;</mi><mo>-</mo><mn>1</mn>
-      </mtd>
-		</mtr><mtr>
-			<mtd>
-				<mi>&gamma;</mi><mo>=</mo><mi>&omega;</mi><mo>/</mo><mi>&pi;</mi>
-			</mtd>
-		</mtr><mtr>
-			<mtd>
-				<mi>&Gamma;</mi><mo>=</mo><mi>&gamma;</mi><mo>-</mo><mn>1</mn>
-			</mtd>
 		</mtr>
 	</mtable>
 </math>
@@ -372,7 +369,7 @@
 			<mrow>
 				<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
 			</mrow><mrow>
-				<mi>&pi;</mi><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup>
+				<mi>I</mi><msup><mi>i</mi><mrow><mi>N</mi><mo>-</mo><mn>1</mn></mrow></msup>
 			</mrow>
 		</mfrac>
     <mo>+</mo>
@@ -388,9 +385,8 @@
     <mfrac>
       <mrow>
         <msup><mi>&gamma;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
-      </mrow><mrow>
-      	<mi>&pi;</mi><mi>&Gamma;</mi>
-			</mrow>
+      </mrow>
+      <mi>&Gamma;</mi>
     </mfrac>
     <mo>-</mo><mi>t</mi><msub><mi>R</mi><mi>N</mi></msub>
   <mo>]</mo></mrow>
