@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Mortgage Months Ratio</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/ben.css">
+	<script data-ad-client="ca-pub-2647559998401134" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+<div id="horizontal-div-containing-entire-page">
+<header>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2647559998401134"
+	     crossorigin="anonymous"></script>
+	<!-- header-ad -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-2647559998401134"
+	     data-ad-slot="2556218560"
+	     data-ad-format="auto"
+	     data-full-width-responsive="true"></ins>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</header>
+<aside style="background-image: Linear-gradient(to top, #a02040, #404040);">
+	<a href="index.html">
+		<img width="252px;" alt="Snth Logo" src="../Brand/20220619-pyramid.png">
+	</a>
+</aside>
+<div id="vertical-div-containing-article-and-navigation">
+<hr>
+<article>
+<h1>Mortgage Months Ratio</h1>
+<p> Fixed rate mortgage payments are based on a
+  <a href="https://en.wikipedia.org/wiki/Geometric_series#Sum"
+  style="text-decoration:none;" target="_blank">finite geometric series</a>.
+</p>
+<p> Let <i>P<sub>m</sub></i> be the principal remaining after the payment at
+  the end of the <i>m<sup>th</sup></i> month. The change in principal
+  each month is due to growth in principal from the monthly interest
+  factor (<i>i</i>) minus the monthly payment (<i>p</i>).
+  Starting from the initial loan size:
+</p>
+<math style="margin-left:10%;">
+  <msub><mi>P</mi><mn>1</mn></msub><mo>=</mo><mi>i</mi>
+  <msub><mi>P</mi><mn>0</mn></msub><mo>-</mo><mi>p</mi>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><mi>i</mi>
+  <msub><mi>P</mi><mn>1</mn></msub><mo>-</mo><mi>p</mi>
+  <mo>=</mo><mi>i</mi>
+  <mo>(</mo>
+    <mi>i</mi><msub><mi>P</mi><mn>0</mn></msub><mo>-</mo><mi>p</mi>
+  <mo>)</mo>
+  <mo>-</mo><mi>p</mi>
+  <mo>=</mo>
+  <msup><mi>i</mi><mn>2</mn></msup><msub><mi>P</mi><mn>0</mn></msub>
+  <mo>-</mo><mi>p</mi>
+  <mo>(</mo>
+    <mi>i</mi><mo>+</mo><mn>1</mn>
+  <mo>)</mo>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><mi>i</mi>
+  <msub><mi>P</mi><mn>2</mn></msub><mo>-</mo><mi>p</mi>
+  <mo>=</mo><mi>i</mi>
+  <mo>(</mo>
+    <msup><mi>i</mi><mn>2</mn></msup><msub><mi>P</mi><mn>0</mn></msub>
+    <mo>-</mo><mi>p</mi>
+    <mo>(</mo>
+      <mi>i</mi><mo>+</mo><mn>1</mn>
+    <mo>)</mo>
+  <mo>)</mo>
+  <mo>-</mo><mi>p</mi>
+  <mo>=</mo>
+  <msup><mi>i</mi><mn>3</mn></msup><msub><mi>P</mi><mn>0</mn></msub>
+  <mo>-</mo><mi>p</mi>
+  <mo>(</mo>
+    <msup><mi>i</mi><mn>2</mn></msup><mo>+</mo><mi>i</mi><mo>+</mo><mn>1</mn>
+  <mo>)</mo>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <mtext>...</mtext>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <msub><mi>P</mi><mn>m</mn></msub>
+  <mo>=</mo>
+  <msup><mi>i</mi><mi>m</mi></msup><msub><mi>P</mi><mn>0</mn></msub>
+  <mo>-</mo><mi>p</mi>
+  <munderover>
+    <mo>&Sum;</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow>
+    <mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow>
+  </munderover>
+  <msup><mi>i</mi><mi>k</mi></msup>
+</math>
+<br><br>
+<math style="margin-left:10%;">
+  <msub><mi>P</mi><mn>m</mn></msub>
+  <mo>=</mo>
+  <mrow><mo>{</mo>
+    <mtable>
+      <mtr>
+        <mtd>
+          <msup><mi>i</mi><mi>m</mi></msup><msub><mi>P</mi><mn>0</mn></msub>
+          <mo>-</mo><mi>p</mi>
+          <mfrac>
+            <mrow><msup><mi>i</mi><mi>m</mi></msup><mo>-</mo><mn>1</mn></mrow>
+            <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+          </mfrac>
+        </mtd><mtd>
+          <mtext>,</mtext>
+        </mtd><mtd>
+          <mspace width="1em"/><mi>i</mi><mo>&ne;</mo><mn>1</mn>
+        </mtd>
+      </mtr><mtr>
+        <mtd>
+          <msub><mi>P</mi><mn>0</mn></msub><mo>-</mo><mi>p</mi><mi>m</mi>
+        </mtd><mtd>
+          <mtext>,</mtext>
+        </mtd><mtd>
+          <mspace width="1em"/><mi>i</mi><mo>=</mo><mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+  </mrow>
+</math>
+<p> For an <i>N</i>-month mortgage, the principal remaining after the
+  payment at the end of the N<sup>th</sup> month is zero. This allows
+  us to calculate the required monthly mortgage payment for a given
+  loan size.
+</p>
+<math style="margin-left:10%;">
+  <mn>0</mn><mo>=</mo>
+  <msup><mi>i</mi><mi>N</mi></msup><msub><mi>P</mi><mn>0</mn></msub>
+  <mo>-</mo><mi>p</mi>
+  <mfrac>
+    <mrow><msup><mi>i</mi><mi>N</mi></msup><mo>-</mo><mn>1</mn></mrow>
+    <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+  </mfrac>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <mfrac>
+    <mrow><msup><mi>i</mi><mi>N</mi></msup><msub><mi>P</mi><mn>0</mn></msub></mrow>
+    <mi>p</mi>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow><msup><mi>i</mi><mi>N</mi></msup><mo>-</mo><mn>1</mn></mrow>
+    <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+  </mfrac>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>P</mi><mn>0</mn></msub><mi>p</mi></mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow><mn>1</mn><mo>-</mo><msup><mi>i</mi><mrow><mo>-</mo><mi>N</mi></mrow></msup></mrow>
+    <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+  </mfrac>
+  <mspace width="2em"/><mtext>or</mtext><mspace width="2em"/>
+  <mi>p</mi><mo>=</mo><msub><mi>P</mi><mn>0</mn></msub>
+  <mrow><mo>(</mo>
+    <mfrac>
+      <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+      <mrow><mn>1</mn><mo>-</mo><msup><mi>i</mi><mrow><mo>-</mo><mi>N</mi></mrow></msup></mrow>
+    </mfrac>
+  <mo>)</mo></mrow>
+</math>
+<p> We call this value, the coefficient that is independent of mortgage size,
+  the mortgage-months-ratio (<i>R<sub>N</sub></i>).
+</p>
+<math style="margin-left:10%;">
+  <msub><mi>R</mi><mi>N</mi></msub><mo>=</mo>
+  <mrow><mo>{</mo>
+    <mtable>
+      <mtr>
+        <mtd>
+          <mfrac>
+            <mrow><mn>1</mn><mo>-</mo><msup><mi>i</mi><mrow><mo>-</mo><mi>N</mi></mrow></msup></mrow>
+            <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+          </mfrac>
+          <mspace width="0.2em"/><mtext>months</mtext>
+        </mtd><mtd>
+          <mtext>,</mtext>
+        </mtd><mtd>
+          <mi>i</mi><mo>&ne;</mo><mn>1</mn>
+        </mtd>
+      </mtr><mtr>
+        <mtd>
+          <mi>N</mi><mspace width="0.5em"/><mtext>months</mtext>
+        </mtd><mtd>
+          <mtext>,</mtext>
+        </mtd><mtd>
+          <mi>i</mi><mo>=</mo><mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+  </mrow>
+</math>
+<p> This ratio relates the initial loan size to the monthly mortgage payment
+  and depends only on interest rates and mortgage term.
+</p>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>P</mi><mn>0</mn></msub><mi>p</mi></mfrac>
+  <mo>=</mo><msub><mi>R</mi><mi>N</mi>
+</math>
+<p> Substituting this result back into the equation for principal
+  remaining in a given month:
+</p>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>P</mi><mn>m</mn></msub><mi>p</mi></mfrac>
+  <mo>=</mo>
+  <msup><mi>i</mi><mi>m</mi></msup>
+  <mfrac><msub><mi>P</mi><mn>0</mn></msub><mi>p</mi></mfrac>
+  <mo>-</mo>
+  <mfrac>
+    <mrow><msup><mi>i</mi><mi>m</mi></msup><mo>-</mo><mn>1</mn></mrow>
+    <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+  </mfrac>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>P</mi><mn>m</mn></msub><mi>p</mi></mfrac>
+  <mo>=</mo>
+  <msup><mi>i</mi><mi>m</mi></msup><msub><mi>R</mi><mi>N</mi></msub>
+  <mo>-</mo>
+  <mfrac>
+    <mrow><msup><mi>i</mi><mi>m</mi></msup><mo>-</mo><mn>1</mn></mrow>
+    <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+  </mfrac>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>P</mi><mn>m</mn></msub><mi>p</mi></mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup><mi>i</mi><mi>m</mi></msup>
+      <mo>(</mo><mn>1</mn><mo>-</mo><msup><mi>i</mi><mrow><mo>-</mo><mi>N</mi></mrow></msup><mo>)</mo>
+    </mrow>
+    <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+  </mfrac>
+  <mo>-</mo>
+  <mfrac>
+    <mrow><msup><mi>i</mi><mi>m</mi></msup><mo>-</mo><mn>1</mn></mrow>
+    <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+  </mfrac>
+</math>
+<br>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>P</mi><mn>m</mn></msub><mi>p</mi></mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>1</mn><mo>-</mo>
+      <msup><mi>i</mi><mrow><mi>m</mi><mo>-</mo><mi>N</mi></mrow></msup>
+    </mrow>
+    <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+  </mfrac>
+</math>
+<p> Once again combining with the zero percent interest rate case:
+</p>
+<math style="margin-left:10%;">
+  <mfrac><msub><mi>P</mi><mn>m</mn></msub><mi>p</mi></mfrac>
+  <mo>=</mo>
+  <mrow><mo>{</mo>
+    <mtable>
+      <mtr>
+        <mtd>
+          <mfrac>
+            <mrow>
+              <mn>1</mn><mo>-</mo>
+              <msup><mi>i</mi><mrow><mi>m</mi><mo>-</mo><mi>N</mi></mrow></msup>
+            </mrow>
+            <mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow>
+          </mfrac>
+        </mtd><mtd>
+          <mtext>,</mtext>
+        </mtd><mtd>
+          <mspace width="1em"/><mi>i</mi><mo>&ne;</mo><mn>1</mn>
+        </mtd>
+      </mtr><mtr>
+        <mtd>
+          <mi>N</mi><mo>-</mo><mi>m</mi>
+        </mtd><mtd>
+          <mtext>,</mtext>
+        </mtd><mtd>
+          <mspace width="1em"/><mi>i</mi><mo>=</mo><mn>1</mn>
+        </mtd>
+      </mtr>
+    </mtable>
+  </mrow>
+</math>
+</article>
+<nav>
+  <ul>
+    <li><a href="index.html">Prev</a></li>
+    <li><a href="price-floor-circuit.html">Next</a></li>
+		<li><a href="index.html">Index</a></li>
+		<li><a href="../Privacy-Policy/index.html">Privacy</a></li>
+  </ul>
+  <div style="clear: both; min-width: 100%; margin: 0px; padding: 0px;"></div>
+</nav>
+<footer>
+<br>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	<img alt="Creative Commons License" style="border-width:0"
+	src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
+  Ben Lorenzetti<br>
+  This work is licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
+	Commons Attribution 4.0 International License
+</a>.
+</footer>
+</div><!--article+nav wrapper-->
+<footer>
+</footer>
+</div><!--horizontal centering div-->
+</body>
+</html>
