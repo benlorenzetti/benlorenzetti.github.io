@@ -140,7 +140,7 @@
 	credit score (which affects <i>G<sub>M</sub></i>) and income tax rate
 	(<i>T<sub>inc</sub></i>), most of the inputs are property specific or
 	local in nature. Snth.us provides a
-	<a href="operating-expenses.html"   style="text-decoration: none; white-space:nowrap;">
+	<a href="operating-expenses.html" style="text-decoration: none; white-space:nowrap;">
 		<i>V<sub>floor</sub>*</i> calculator
 	</a>
 	and a series of how-to's for estimating this reference point for an average
@@ -163,7 +163,7 @@
 		<msubsup><mi>R</mi><mi>N</mi><mo>*</mo></msubsup>
 	</mfrac>
 </math>
-<h2>Morgage Preference and Personal Credit Factors</h2>
+<h2>Morgage Preference Factor (<i>C</i>)</h2>
 <p> When a buyer and seller agree to a sales prices above
 	<i>V<sub>floor</sub></i>,
 	this is modelled by the buyer becoming a new independent voltage source
@@ -175,14 +175,14 @@
 	mortgage-free net income after taxes (<i>q</i>).
 </p>
 <math style="margin-left:10%;">
-	<mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+	<mfrac><mi>q</mi><mi>p</mi></mfrac><mo>=</mo>
 	<mfrac>
 		<mrow>
-			<msub><mi>V</mi><mtext>mkt</mtext></msub><msub><mi>G</mi><mi>M</mi></msub>
-		</mrow><mrow>
 			<msubsup><mi>i</mi><mtext>inc</mtext><mo>*</mo></msubsup><mo>-</mo>
 			<msub><mi>V</mi><mtext>mkt</mtext></msub>
 			<mo>(</mo><mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac><mo>)</mo>
+		</mrow><mrow>
+			<msub><mi>V</mi><mtext>mkt</mtext></msub><msub><mi>G</mi><mi>M</mi></msub>
 		</mrow>
 	</mfrac>
 </math>
@@ -193,70 +193,108 @@ of the average homebuyer,
 	<math>
 		<mi>c</mi><mo>=</mo>
 		<mfrac>
-			<msub><mi>V</mi><mtext>market</mtext></msub>
+			<msub><mi>V</mi><mtext>mkt</mtext></msub>
 			<msubsup><mi>V</mi><mtext>floor</mtext><mo>*</mo></msubsup>
 		</mfrac>
 	</math>. Dividing through by <i>V<sub>floor</sub>*</i> introduces <i>c</i>
 	into the cash-flow ratio equation:
 </p>
 <math style="margin-left:10%;">
-	<mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+	<mfrac><mi>q</mi><mi>p</mi></mfrac><mo>=</mo>
 	<mfrac>
 		<mrow>
-			<mi>c</mi><msub><mi>G</mi><mi>M</mi></msub>
-		</mrow><mrow>
 			<mo>(</mo><mfrac>
 				<msubsup><mi>i</mi><mtext>inc</mtext><mo>*</mo></msubsup>
 				<msubsup><mi>V</mi><mtext>floor</mtext><mo>*</mo></msubsup>
 			</mfrac><mo>)</mo>
 			<mo>-</mo><mi>c</mi>
 			<mo>(</mo><mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac><mo>)</mo>
+		</mrow><mrow>
+			<mi>c</mi><msub><mi>G</mi><mi>M</mi></msub>
 		</mrow>
 	</mfrac>
 </math>
-<br>
+<br><br>
 <math style="margin-left:10%;">
-	<mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+	<mfrac><mi>q</mi><mi>p</mi></mfrac><mo>=</mo>
 	<mfrac>
 		<mrow>
-			<mi>c</mi><msub><mi>G</mi><mi>M</mi></msub>
-		</mrow><mrow>
-			<msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup><mo>+</mo>
-			<mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac>
+			<mo>(</mo>
+				<msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup><mo>+</mo>
+				<mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac>
+			<mo>)</mo>
 			<mo>-</mo><mi>c</mi>
 			<mo>(</mo><mfrac><msub><mi>G</mi><mtext>prop</mtext></msub><mn>12</mn></mfrac><mo>)</mo>
+		</mrow><mrow>
+			<mi>c</mi><msub><mi>G</mi><mi>M</mi></msub>
 		</mrow>
 	</mfrac>
 </math>
-<br>
+<p> Next, dividing through by <i>G<sub>M</sub>*</i> extracts a
+	ratio of the buyer's personal credit availability compared to the
+	average homebuyer.
+</p>
 <math style="margin-left:10%;">
-	<mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
+	<mfrac><mi>q</mi><mi>p</mi></mfrac><mo>=</mo>
 	<mfrac>
 		<mrow>
-			<mi>c</mi><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
-		</mrow><mrow>
 			<mn>1</mn><mo>-</mo>
-			<mo>(</mo><mi>c</mi><mo>-</mo><mn>1</mn><mo>)</mo>
 			<mfrac>
 				<msub><mi>G</mi><mtext>prop</mtext></msub>
 				<mrow><mn>12</mn><msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup></mrow>
 			</mfrac>
+			<mo>(</mo><mi>c</mi><mo>-</mo><mn>1</mn><mo>)</mo>
+		</mrow><mrow>
+			<mi>c</mi>
 		</mrow>
 	</mfrac>
-	<mspace width="2em"/><mtext>where</mtext><mspace width="2em"/>
-	<mi>f</mi><mo>=</mo>
+	<mo>*</mo>
 	<mfrac>
 		<msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup>
 		<msub><mi>G</mi><mi>M</mi></msub>
 	</mfrac>
 </math>
-<p> Finally we extract an approximately 1-to-1 transfer relationship for
-	mortgage preference factors (<i>C</i> vs. <i>c</i>) due to the
-	relationship between local property taxes and national monetary policy.
+<br><br>
+<math style="margin-left:10%;">
+	<mfrac><mi>q</mi><mi>p</mi></mfrac><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<mn>1</mn><mo>-</mo>
+			<mfrac>
+				<msub><mi>G</mi><mtext>prop</mtext></msub>
+				<mrow><mn>12</mn><msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup></mrow>
+			</mfrac>
+			<mo>(</mo><mi>c</mi><mo>-</mo><mn>1</mn><mo>)</mo>
+		</mrow><mrow>
+			<mi>c</mi>
+		</mrow>
+	</mfrac>
+	<mo>*</mo>
+	<mfrac>
+		<mrow>
+			<msub><mi>R</mi><mi>N</mi></msub>
+			<mo>(</mo><mn>1</mn><mo>-</mo><mi>d*</mi><mo>)</mo>
+		</mrow>
+		<mrow>
+			<msubsup><mi>R</mi><mi>N</mi><mo>*</mo></msubsup>
+			<mo>(</mo><mn>1</mn><mo>-</mo><mi>d</mi><mo>)</mo>
+		</mrow>
+	</mfrac>
+</math>
+<p> Finally we define a transfer relationship for
+	mortgage preference factors (<i>C</i> vs. <i>c</i>) to shorten the
+	written equation, which is approximately 1-to-1 if local property
+	taxes are significantly smaller than typical mortgage payments.
 </p>
 <math style="margin-left:10%">
-	<mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo>
-	<mfrac><mi>C</mi><mi>f</mi></mfrac>
+	<mfrac><mi>q</mi><mi>p</mi></mfrac><mo>=</mo>
+	<mfrac>
+		<mrow>
+			<msub><mi>R</mi><mi>N</mi></msub><mi>l</mi>
+		</mrow><mrow>
+			<msubsup><mi>R</mi><mi>N</mi><mo>*</mo></msubsup><mi>C</mi>
+		</mrow>
+	</mfrac>
 	<mspace width="2em"/><mtext>where</mtext><mspace width="2em"/>
 	<mi>C</mi><mo>=</mo>
 	<mfrac>
@@ -278,28 +316,24 @@ of the average homebuyer,
 		<msubsup><mi>V</mi><mtext>floor</mtext><mo>*</mo></msubsup>
 	</mfrac>
 	<mspace width="1.5em"/><mtext>and</mtext><mspace width="1.5em"/>
-	<mi>f</mi><mo>=</mo>
+	<mi>l</mi><mo>=</mo>
 	<mfrac>
-		<mrow>
-			<msub><mi>R</mi><mi>N</mi></msub>
-			<msubsup><mi>G</mi><mi>M</mi><mo>*</mo></msubsup>
-		</mrow><mrow>
-			<mn>1</mn><mo>-</mo><mi>d</mi>
-		</mrow>
+		<mrow><mn>1</mn><mo>-</mo><mi>d*</mi></mrow>
+		<mrow><mn>1</mn><mo>-</mo><mi>d</mi></mrow>
 	</mfrac>
 </math>
-<p> We call the factor <i>f</i> the personal credit factor
-	because <i>R<sub>N</sub></i> will rise and fall with your personal credit
-	score and loan programs and choices will affect both your
-	mortgage months ratio (<i>R<sub>N</sub></i>) and down payment fraction
-	(<i>d</i>).
+<p> We call the factor <i>l</i> the personal leverage factor
+	because lower down payment requirements are available to some
+	borrowers and others may choose to pay a higher down payment
+	fraction (<i>d</i>).
 </p>
 <p>
-	Ultimately the capital market mortgage preference factor (<i>C</i>) and
-	the personal credit factor (<i>f</i>) are useful because they
-	make prices relative&mdash;and thus independent of mortgage sizes, which
-  vary over time due to government policy and inflation and between
-	properties of different size.
+	Ultimately the market mortgage preference factor (<i>C</i>) is useful
+	because it encapsulates how a property will cash-flow based on its
+	market price and potential income, producing a remarkably stable
+	<a href="price-to-rent-ratio.html" style="text-decoration: none;">price-to-rent ratio</a>
+	over time. The initial cash-flow ratio (<i>q/p</i>) is explored in the
+	<a href="cash-flow-power.html" style="text-decoration: none;">next article</a>.
 </p>
 <footer>
 <hr>
@@ -316,7 +350,7 @@ of the average homebuyer,
 <nav>
   <ul>
     <li><a href="mortgage-months-ratio.html">Prev</a></li>
-    <li><a href="#">Next</a></li>
+    <li><a href="price-to-rent-ratio.html">Next</a></li>
     <li><a href="index.html">Index</a></li>
 		<li><a href="../Privacy-Policy/index.html">Privacy Policy</a></li>
   </ul>

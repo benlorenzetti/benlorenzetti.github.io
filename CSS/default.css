@@ -132,3 +132,5 @@ th {text-align: right; vertical-align: top; padding: 5px;}
 li {padding: 5px;}
 pre {padding: 3px; padding-left: 20px; padding-right: 20px;
      margin: 5px; background-color: HoneyDew;}
+.code { font-family: monospace; font-size: 10pt; white-space: pre;
+     margin-top:0; padding-top:0;}

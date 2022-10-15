@@ -104,28 +104,28 @@
 <math style="margin-left:10%;">
 	<mo>&Delta;</mo>
 	<msub><mi>E</mi><mi>m</mi></msub>
-	<mo>=</mo><msub><mi>P</mi><mi>m</mi></msub>
-	<mo>-</mo><msub><mi>P</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub>
+	<mo>=</mo><msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
+	<mo>-</mo><msub><mi>P</mi><mi>m</mi></msub>
 	<mo>+</mo><mo>(</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn><mo>)</mo>
-	<msub><mi>P</mi><mi>m</mi></msub>
+	<msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 </math>
 <br>
 <math style="margin-left:10%;">
 	<mo>&Delta;</mo>
 	<msub><mi>E</mi><mi>m</mi></msub>
-	<mo>=</mo><msub><mi>P</mi><mi>m</mi></msub>
+	<mo>=</mo><msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 	<mo>-</mo><mo>(</mo>
-		<mi>i</mi><msub><mi>P</mi><mi>m</mi></msub>
+		<mi>i</mi><msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 		<mo>-</mo><mi>p</mi>
 	<mo>)</mo>
 	<mo>+</mo><mo>(</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn><mo>)</mo>
-	<msub><mi>P</mi><mi>m</mi></msub>
+	<msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 </math>
 <br>
 <math style="margin-left:10%;">
 	<mo>&Delta;</mo>
 	<msub><mi>E</mi><mi>m</mi></msub>
-	<mo>=</mo><msub><mi>P</mi><mi>m</mi></msub>
+	<mo>=</mo><msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 	<mo>(</mo>
 		<mn>1</mn><mo>-</mo><mi>i</mi><mo>+</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn>
 	<mo>)</mo>
@@ -137,7 +137,7 @@
 	<msub><mi>E</mi><mi>m</mi></msub>
 	<mo>=</mo><mi>p</mi><mo>+</mo>
 	<mo>(</mo><mi>&pi;</mi><mo>-</mo><mi>i</mi><mo>)</mo>
-	<msub><mi>P</mi><mi>m</mi></msub>
+	<msub><mi>P</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub>
 </math>
 <p> Substituting the closed form solution for fixed rate mortgages
 	and defining new variables for nominal monthly interest (<i>I</i>) and
@@ -163,7 +163,7 @@
 						<mn>1</mn><mo>-</mo>
 						<msup><mi>i</mi>
 							<mrow>
-								<mo>(</mo><mi>m</mi><mo>-</mo><mi>N</mi><mo>)</mo>
+								<mo>(</mo><mi>m</mi><mo>-</mo><mn>1</mn><mo>-</mo><mi>N</mi><mo>)</mo>
 								<mo>/</mo><mtext>months</mtext>
 							</mrow>
 						</msup>
@@ -174,8 +174,8 @@
 				</mtd>
 			</mtr><mtr>
 				<mtd>
-					<mn>1</mn><mo>+</mo><mi>&Pi;</mi>
-					<mo>(</mo><mi>N</mi><mo>-</mo><mi>m</mi><mo>)</mo>
+					<mn>1</mn><mo>+</mo><mi>&pi;</mi><mi>&Pi;</mi>
+					<mo>(</mo><mi>N</mi><mo>-</mo><mi>m</mi><mo>+</mo><mn>1</mn><mo>)</mo>
 					<mo>/</mo><mtext>months</mtext>
 					<mtext>,</mtext></mtext>
 				</mtd>
@@ -189,7 +189,7 @@
 		<mtr>
 			<mtd><mi>I</mi><mo>=</mo><mi>i</mi><mo>-</mo><mn>1</mn></mtd>
 		</mtr><mtr>
-			<mtd><mi>&Pi;</mi><mo>=</mo><mi>&pi;</mi><mo>-</mo><mn>1</mn></mtd>
+			<mtd><mi>&Pi;</mi><mo>=</mo><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mtd>
 		</mtr>
 	</mtable>
 </math>
@@ -221,9 +221,54 @@
 			<mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
 		</mfrac>
 	<mo>)</mo></mrow>
-	<msup><mi>r</mi><mi>m</mi></msup>
+	<mfrac><msup><mi>r</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup><mi>&pi;</mi></mfrac>
 	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
 	<mi>r</mi><mo>=</mo><mfrac><mi>i</mi><mi>&pi;</mi></mfrac>
+</math>
+<br>
+<math style="margin-left: 10%;">
+	<mfrac>
+		<mrow><mo>&Delta;</mo><mi><msub><mi>E'</mi><mi>m</mi></msub></mrow>
+		<mi>p</mi>
+	</mfrac>
+	<mo>=</mo>
+	<mrow><mo>(</mo>
+		<mfrac>
+			<mrow><mi>i</mi><mo>-</mo><mn>1</mn><mo>+</mo><mi>&pi;</mi><mo>-</mo><mi>i</mi></mrow>
+			<mi>I</mi>
+		</mfrac>
+	<mo>)</mo></mrow>
+	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>m</mi></mrow></msup>
+	<mo>-</mo>
+	<mrow><mo>(</mo>
+		<mfrac>
+			<mi>R</mi>
+			<mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
+		</mfrac>
+	<mo>)</mo></mrow>
+	<msup><mi>r</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup>
+	<mspace width="1em"/><mtext>where</mtext><mspace width="1em"/>
+	<mi>R</mi><mo>=</mo><mi>r</mi><mo>-</mo><mn>1</mn>
+</math>
+<br>
+<math style="margin-left: 10%;">
+	<mfrac>
+		<mrow><mo>&Delta;</mo><mi><msub><mi>E'</mi><mi>m</mi></msub></mrow>
+		<mi>p</mi>
+	</mfrac>
+	<mo>=</mo>
+	<mrow><mo>(</mo>
+		<mfrac><mi>&Pi;</mi><mi>I</mi></mfrac>
+	<mo>)</mo></mrow>
+	<msup><mi>&pi;</mi><mrow><mn>1</mn><mo>-</mo><mi>m</mi></mrow></msup>
+	<mo>-</mo>
+	<mrow><mo>(</mo>
+		<mfrac>
+			<mi>R</mi>
+			<mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
+		</mfrac>
+	<mo>)</mo></mrow>
+	<msup><mi>r</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup>
 </math>
 <p> Summing the inflation-discounted monthly equity gains from the
 	first to <i>n</i><sup>th</sup>
@@ -243,14 +288,14 @@
 <math style="margin-left: 10%;">
 	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
 	<mrow><mo>(</mo>
-		<mn>1</mn><mo>+</mo><mfrac><mrow><mi>&pi;</mi><mo>-</mo><mi>i</mi></mrow><mi>I</mi></mfrac>
+		<mfrac><mi>&Pi;</mi><mi>I</mi></mfrac>
 	<mo>)</mo></mrow>
 	<munderover><mo>&Sum;</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
 	<msup><mi>&pi;</mi><mrow><mo>-</mo><mi>m</mi></mrow></msup>
-	<mo>+</mo>
+	<mo>-</mo>
 	<mrow><mo>(</mo>
 		<mfrac>
-			<mrow><mi>&pi;</mi><mo>-</mo><mi>i</mi></mrow>
+			<mi>R</mi>
 			<mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
 		</mfrac>
 	<mo>)</mo></mrow>
@@ -261,23 +306,21 @@
 <math style="margin-left: 10%;">
 	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
 	<mrow><mo>(</mo>
-		<mn>1</mn><mo>+</mo><mfrac><mrow><mi>&pi;</mi><mo>-</mo><mi>i</mi></mrow><mi>I</mi></mfrac>
+		<mfrac><mi>&Pi;</mi><mi>I</mi></mfrac>
 	<mo>)</mo></mrow>
 	<mfrac>
 		<mrow><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow>
 		<mrow>
-			<mi>&pi;</mi>
-			<mo>(</mo><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>)</mo>
+			<mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup>
 		</mrow>
 	</mfrac>
-	<mo>+</mo>
+	<mo>-</mo>
 	<mrow><mo>(</mo>
 		<mfrac>
-			<mrow><mi>&pi;</mi><mo>-</mo><mi>i</mi></mrow>
+			<mi>R</mi>
 			<mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
 		</mfrac>
 	<mo>)</mo></mrow>
-	<mrow><mo>(</mo><mfrac><mi>i</mi><mi>&pi;</mi></mfrac><mo>)</mo></mrow>
 	<mfrac>
 		<mrow><msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
 		<mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow>
@@ -287,67 +330,23 @@
 <math style="margin-left: 10%;">
 	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
 	<mrow><mo>(</mo>
-		<mfrac><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow><mi>I</mi></mfrac>
-		<mo>+</mo>
-		<mfrac><mrow><mi>&pi;</mi><mo>-</mo><mi>i</mi></mrow><mi>I</mi></mfrac>
+		<mfrac><mi>&Pi;</mi><mi>I</mi></mfrac>
 	<mo>)</mo></mrow>
 	<mfrac>
 		<mrow><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow>
-		<mrow>
-			<mi>&pi;</mi><mo>-</mo><mn>1</mn>
-		</mrow>
+		<mi>&Pi;</mi>
 	</mfrac>
-	<mo>+</mo>
+	<mo>-</mo>
 	<mrow><mo>(</mo>
 		<mfrac>
-			<mrow><mi>&pi;</mi><mo>-</mo><mi>i</mi></mrow>
-			<mrow><mi>I</mi><msup><mi>i</mi><mrow><mi>N</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow>
-		</mfrac>
-	<mo>)</mo></mrow>
-	<mrow><mo>(</mo><mfrac><mn>1</mn><mi>&pi;</mi></mfrac><mo>)</mo></mrow>
-	<mfrac>
-		<mrow><msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
-		<mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow>
-	</mfrac>
-</math>
-<br>
-<math style="margin-left: 10%;">
-	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
-	<mrow><mo>(</mo>
-		<mfrac><mrow><mi>&pi;</mi><mo>-</mo><mn>1</mn></mrow><mi>I</mi></mfrac>
-	<mo>)</mo></mrow>
-	<mfrac>
-		<mrow><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow>
-		<mrow>
-			<mi>&pi;</mi><mo>-</mo><mn>1</mn>
-		</mrow>
-	</mfrac>
-	<mo>+</mo>
-	<mrow><mo>(</mo>
-		<mfrac>
-			<mrow><mn>1</mn><mo>-</mo><mi>r</mi></mrow>
-			<mrow><mi>I</mi><msup><mi>i</mi><mrow><mi>N</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow>
+			<mi>R</mi>
+			<mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
 		</mfrac>
 	<mo>)</mo></mrow>
 	<mfrac>
 		<mrow><msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
-		<mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow>
+		<mi>R</mi>
 	</mfrac>
-</math>
-<br>
-<math style="margin-left: 10%;">
-	<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
-	<mfrac><mn>1</mn><mi>I</mi></mfrac>
-	<mrow><mo>(</mo>
-		<mrow>
-			<mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
-			<mo>+</mo>
-			<mfrac>
-				<mrow><msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
-				<msup><mi>i</mi><mrow><mi>N</mi><mo>-</mo><mn>1</mn></mrow></msup>
-			</mfrac>
-		</mrow>
-	<mo>)</mo></mrow>
 </math>
 <p> Recombining this solution with the other case <i>i = 1</i>,
 </p>
@@ -358,17 +357,24 @@
 		<mtable>
 			<mtr>
 				<mtd>
-					<mrow>
-						<mfrac><mn>1</mn><mrow><mi>I</mi></mrow></mfrac>
-						<mrow><mo>(</mo>
-							<mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
-							<mo>+</mo>
-							<msup><mi>i</mi><mrow><mn>1</mn><mo>-</mo><mi>N</mi></mrow></msup>
-							<mrow><mo>(</mo>
-								<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
-							<mo>)</mo></mrow>
-						<mo>)</mo></mrow>
-					</mrow>
+					<mrow><mo>(</mo>
+						<mfrac><mi>&Pi;</mi><mi>I</mi></mfrac>
+					<mo>)</mo></mrow>
+					<mfrac>
+						<mrow><mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow>
+						<mi>&Pi;</mi>
+					</mfrac>
+					<mo>-</mo>
+					<mrow><mo>(</mo>
+						<mfrac>
+							<mi>R</mi>
+							<mrow><mi>I</mi><msup><mi>i</mi><mi>N</mi></msup></mrow>
+						</mfrac>
+					<mo>)</mo></mrow>
+					<mfrac>
+						<mrow><msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
+						<mi>R</mi>
+					</mfrac>
 					<mtext>,</mtext>
 				</mtd><mtd>
 					<mi>i</mi><mo>&ne;</mo><mn>1</mn>
@@ -387,7 +393,7 @@
 		<mtr>
 			<mtd><mi>r</mi><mo>=</mo><mi>i</mi><mo>/</mo><mi>&pi;</mi></mtd>
 		</mtr><mtr>
-			<mtd><mi>I</mi><mo>=</mo><mi>i</mi><mo>-</mo><mn>1</mn></mtd>
+			<mtd><mi>R</mi><mo>=</mo><mi>r</mi><mo>-</mo><mn>1</mn></mtd>
 		</mtr>
 	</mtable>
 </math>

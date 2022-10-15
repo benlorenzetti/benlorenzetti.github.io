@@ -32,10 +32,96 @@
 <hr>
 <article>
 <h1>Mortgage Months Ratio</h1>
+<p> The first step to understanding how monthly mortgage payments are
+	calculated is converting from an annual percentage rate (APR)
+	to a monthly millage rate (<i>I</i>). For small percentages, the
+	monthly millage rate can be approximated by dividing by 12 (months in
+	a year) and multiplying by 10 because mills are multiplied by
+	1/1000<sup>th</sup> instead of 1/100<sup>th</sup> for percent.
+</p>
+<math style="margin-left:10%;">
+	<mi>I</mi><mo>&approx;</mo>
+	<mfrac>
+		<mrow><mn>1000</mn><mo>&permil;</mo></mrow>
+		<mrow><mn>100</mn><mo>%</mo></mrow>
+	</mfrac>
+	<mo>*</mo>
+	<mfrac>
+		<mrow><mtext>year</mtext></mrow>
+		<mrow><mn>12</mn><mtext>&nbsp;months</mtext></mrow>
+	</mfrac>
+	<mo>*</mo><mtext>APR%</mtext>
+</math>
+<p> When written in decimal form instead of percentage, an APR
+	means that total the amount owed scales each year by an
+	annual multiplying factor
+	<i style="white-space:nowrap;">apr = 1 + APR</i>.
+	The "equivalent" monthly interest rate has to found through this
+	multiplicative factor because it is compounded twelve times for
+	every single annual multiplicative factor.
+</p>
+<math style="margin-left:10%;">
+	<mi>apr</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>APR</mi>
+</math>
+<br>
+<math style="margin-left:10%;">
+	<mi>i</mi><mo>=</mo><msup><mi>apr</mi><mrow><mn>1</mn><mo>/</mo><mn>12</mn></mrow></msup>
+</math>
+<br>
+<math style="margin-left:10%;">
+	<mi>I</mi><mo>=</mo><mi>i</mi><mo>-</mo><mn>1</mn>
+</math>
+<br>
+<p> Combining these into a single equation for the monthly millage rate:</p>
+<math style="margin-left:10%;">
+	<mi>I</mi><mo>=</mo>
+	<mrow><mo>(</mo>
+		<mroot>
+			<mrow>
+				<mn>1</mn><mo>+</mo>
+				<mfrac><mtext>APR</mtext><mrow><mn>100</mn><mo>%</mo></mrow></mfrac>
+			</mrow>
+			<mn>12</mn>
+		</mroot>
+		<mo>-</mo><mn>1</mn>
+	<mo>)</mo></mrow>
+	<mo>*</mo><mn>1000</mn><mo>&permil;</mo>
+</math>
+<br>
 <p> Fixed rate mortgage payments are based on a
   <a href="https://en.wikipedia.org/wiki/Geometric_series#Sum"
   style="text-decoration:none;" target="_blank">finite geometric series</a>.
+	For reference later in this article, the open and closed-form
+	solutions for a finite geometric series are shown below.
 </p>
+<math style="margin-left:10%;">
+	<munderover>
+		<mo>&Sum;</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow>
+		<mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>
+	</munderover>
+	<msup><mi>r</mi><mi>k</mi></msup>
+	<mo>=</mo><mn>1</mn><mo>+</mo><mi>r</mi>
+	<mo>+</mo><msup><mi>r</mi><mn>2</mn></msup>
+	<mo>+</mo><msup><mi>r</mi><mn>3</mn></msup>
+	<mo>+</mo><mo>&hellip;</mo>
+	<mo>+</mo><msup><mi>r</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup>
+</math>
+<br><br>
+<math style="margin-left:10%;">
+	<munderover>
+		<mo>&Sum;</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow>
+		<mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>
+	</munderover>
+	<msup><mi>r</mi><mi>k</mi></msup>
+	<mo>=</mo>
+	<mfrac>
+		<mrow><msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
+		<mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow>
+	</mfrac>
+	<mspace width="2em"/><mtext>for</mtext><mspace width="2em"/>
+	<mi>r</mi><mo>&ne;</mo><mn>1</mn>
+</math>
+
 <p> Let <i>P<sub>m</sub></i> be the principal remaining after the payment at
   the end of the <i>m<sup>th</sup></i> month. The change in principal
   each month is due to growth in principal from the monthly interest

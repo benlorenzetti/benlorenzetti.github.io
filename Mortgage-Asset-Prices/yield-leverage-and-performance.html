@@ -45,7 +45,10 @@
 <math style="margin-left:10%;">
   <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac><mo>=</mo>
   <mrow>
-		<mfrac><mi>f</mi><mi>C</mi></mfrac>
+		<mfrac>
+			<mrow><msub><mi>R</mi><mi>N</mi></msub><msub><mi>G</mi><mi>L</mi></msub></mrow>
+			<mi>C</mi>
+		</mfrac>
     <mo>(</mo><mfrac>
       <mrow><msup><mi>&omega;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow>
       <mi>&Omega;</mi>
@@ -327,7 +330,7 @@
 			<mfrac><msub><mi>&Sigma;'</mi><mi>n</mi></msub><mi>p</mi></mfrac>
       <mo>+</mo>
       <mfrac><msub><mi>Q</mi><mi>n</mi></msub><mi>p</mi></mfrac>
-      <mo>-</mo><mi>t</mi><msub><mi>R</mi><mi>N</mi></msub>
+      <mo>-</mo><mi>f</mi><msub><mi>R</mi><mi>N</mi></msub>
     </mrow>
     <mo>)</mo>
   </mrow>
@@ -341,7 +344,7 @@
 		</mrow>
   </mfrac>
 	<mspace width="1em"/><mtext>and</mtext><mspace width="1em"/>
-	<mi>t</mi><mo>=</mo>
+	<mi>f</mi><mo>=</mo>
 	<mfrac>
 		<mrow>
 			<msub><mi>F</mi><mn>1</mn></msub>
@@ -364,16 +367,22 @@
 			</mrow>
 			<mi>I</mi>
 		</mfrac>
-		<mo>+</mo>
+		<mo>-</mo>
 		<mfrac>
 			<mrow>
 				<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
 			</mrow><mrow>
-				<mi>I</mi><msup><mi>i</mi><mrow><mi>N</mi><mo>-</mo><mn>1</mn></mrow></msup>
+				<mi>I</mi><msup><mi>i</mi><mrow><mi>N</mi></mrow></msup>
 			</mrow>
 		</mfrac>
     <mo>+</mo>
-		<mfrac><mi>f</mi><mi>C</mi></mfrac>
+		<mfrac>
+			<mrow>
+				<msub><mi>R</mi><mi>N</mi></msub><mi>l</mi>
+			</mrow><mrow>
+				<msubsup><mi>R</mi><mi>N</mi><mo>*</mo></msubsup><mi>C</mi>
+			</mrow>
+		</mfrac><mo>*</mo>
 		<mfrac>
       <mrow>
         <msup><mi>&omega;</mi><mi>n</mi></msup>
@@ -388,13 +397,59 @@
       </mrow>
       <mi>&Gamma;</mi>
     </mfrac>
-    <mo>-</mo><mi>t</mi><msub><mi>R</mi><mi>N</mi></msub>
+    <mo>-</mo><mi>f</mi><msub><mi>R</mi><mi>N</mi></msub>
   <mo>]</mo></mrow>
 	<mspace width="1.5em"/><mtext>for</mtext><mspace width="0.5em"/>
 	<mi>i</mi><mo>&ne;</mo><mn>1</mn><mo>,</mo><mspace width="0.5em"/>
 	<mi>&pi;</mi><mo>&ne;</mo><mn>1</mn><mo>,</mo><mspace width="0.5em"/>
 	<mi>&omega;</mi><mo>&gt;</mo><mn>1</mn><mo>,</mo><mspace width="0.5em"/>
 	<mi>&gamma;</mi><mo>&gt;</mo><mn>1</mn><mo>.</mo>
+</math>
+<br><br>
+<math style="margin-left:10%;">
+  <msub><mi>Y</mi><mi>n</mi></msub>
+  <mo>=</mo><mi>L</mi><mo>*</mo>
+  <mrow><mo>[</mo>
+		<mrow><mo>(</mo>
+			<mfrac>
+				<mrow><msubsup><mi>G</mi><mi>N</mi><mo>*</mo></msubsup><mi>l</mi></mrow>
+				<mrow><mi>C</mi></mrow>
+			</mfrac>
+		<mo>)</mo></mrow>
+		<mfrac>
+      <mrow>
+        <msup><mi>&omega;</mi><mi>n</mi></msup>
+        <mo>-</mo><mn>1</mn>
+      </mrow>
+      <mi>&Omega;</mi>
+    </mfrac>
+		<mo>+</mo>
+		<mfrac><mn>1</mn><msub><mi>R</mi><mi>N</mi></msub></mfrac>
+		<mrow><mo>(</mo>
+			<mfrac>
+				<mrow>
+					<mn>1</mn><mo>-</mo><msup><mi>&pi;</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup>
+				</mrow>
+				<mi>I</mi>
+			</mfrac>
+			<mo>-</mo>
+			<mfrac>
+				<mrow>
+					<msup><mi>r</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+				</mrow><mrow>
+					<mi>I</mi><msup><mi>i</mi><mrow><mi>N</mi></mrow></msup>
+				</mrow>
+			</mfrac>
+    	<mo>-</mo>
+    	<mfrac>
+      	<mrow>
+        	<msup><mi>&gamma;</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn>
+      	</mrow>
+      	<mi>&Gamma;</mi>
+    	</mfrac>
+    <mo>)</mo></mrow>
+		<mo>-</mo><mi>f</mi>
+  <mo>]</mo></mrow>
 </math>
 <p>	This equation describes the differential performance of a
 	mortgage investment after <i>n</i> months. For example
